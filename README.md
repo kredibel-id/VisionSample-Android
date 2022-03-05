@@ -56,6 +56,7 @@ dependencies {
     implementation 'io.kredibel:vision:0.0.1-beta' // <—-- Add this. Please check the latest version.
 }
 ```
+Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
 ### Access Token
 Please contact our sales team to get the token/api key.
 
