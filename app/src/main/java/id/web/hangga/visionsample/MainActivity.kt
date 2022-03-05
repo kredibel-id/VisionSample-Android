@@ -37,6 +37,10 @@ class MainActivity : AppCompatActivity() {
                         showMessage(p0!!)
                     }
                 })
+                .onSuccessPage(MainActivity::class.java)  // optional
+                .showContour(true)     // optional
+                .showLabel(true)       // optional
+                .showBoundingBox(true) // optional
                 .start()
         }
 
