@@ -108,6 +108,14 @@ Vision.with(this)
     .onSuccessPage(MainActivity::class.java)  // optional
     .start()
 ```
+Java
+```kotlin
+Vision.with(this)
+    .identity(Identity.KTP)  // required. Identity type.
+    .showOCRLastResult(true) // optional
+    .onSuccessPage(MainActivity.class)  // optional
+    .start();
+```
 ### Using VisionListener
 You can use Vision Listener for capture all detection results and or add a custom action.
 Kotlin
@@ -168,14 +176,6 @@ Vision.with(this)
     .showContour(true)     // optional
     .showLabel(true)       // optional
     .showBoundingBox(true) // optional
-    .start();
-```
-Java
-```kotlin
-Vision.with(this)
-    .identity(Identity.KTP)  // required. Identity type.
-    .showOCRLastResult(true) // optional
-    .onSuccessPage(MainActivity.class)  // optional
     .start();
 ```
 <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/on-detecting.png?raw=true"/> <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ktp-ocr.png?raw=true"/>
