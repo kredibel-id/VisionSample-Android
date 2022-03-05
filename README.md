@@ -1,6 +1,13 @@
 # VisionSample-Android
 
-A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.<br/><br/><br/><br/>
+A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.
+You can checkout the source code of this project.
+#### Checkout
+```text
+git clone https://github.com/kredibel-id/VisionSample-Android.git
+```
+then open it with Android Studio or Intellij IDEA.
+<br/><br/><br/><br/>
 
 <p align="center">  
     <img align="center" width="200" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
