@@ -153,7 +153,7 @@ Vision.with(this)
     .start();
 ```
 ### Optional Features   
-Some optional features that you can use.
+Some optional features that you can use.   
 Kotlin
 ```kotlin
 Vision.with(this)
