@@ -13,22 +13,36 @@ An example of implementing **_Liveness Detection_** and **_Identity OCR_** on an
 | API 19/ Android 4.4/ KitKat | API 31/ Android 12 |
 
 ### Gradle
-Add this repository declaration to gradle script on project level.
-
+#### 1. Add kredibel repository.
+You can do this in several alternative ways.
+- In the build.gradle file at Project level. 
 ```groovy
-repositories {
-    mavenCentral()
-    google()
-    maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- Add this
+allprojects {
+    repositories {
+       google()
+       mavenCentral()
+       maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this 
+    }
 }
 ```
+- Or in dependencyResolutionManagement in setting.gradle.
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this
+    }
+}
+rootProject.name = "YourProjectName"
+include ':app'
+```
 
-
-Add this dependency to gradle script on app module.
+#### 2. Add this dependency to gradle script on app module.
 ```groovy
 dependencies {
-    implementation 'io.kredibel:vision:0.0.1-beta-20220304142741' // <—-- Add this. 
-    // Please check the latest version.
+    implementation 'io.kredibel:vision:0.0.1-beta' // <—-- Add this. Please check the latest version.
 }
 ```
 ### Access Token
