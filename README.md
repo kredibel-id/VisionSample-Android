@@ -109,7 +109,7 @@ Vision.with(this)
 Java
 ```kotlin
 Vision.with(this)
-    .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
+    .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN}) // required
     .listener(new VisionListener() { // listener, optional on Liveness & OCR
         @Override
         public void onSuccess(List<LivenessResult> list, OcrResult ocrResult) {
