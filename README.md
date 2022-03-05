@@ -1,10 +1,14 @@
 # VisionSample-Android
-[![KredibelVisionSDK: 2.5.3](https://img.shields.io/badge/Kredibel.Vision.SDK-%200.0.1.beta.20220304142741-brightgreen.svg)](https://github.com/kredibel-id/VisionSample-Android/)  
-<p align="center">
-<img align="center" width="200" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
-</p>
 
-A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.
+A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.<br/><br/><br/><br/>
+
+<p align="center">  
+    <img align="center" width="200" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
+</p>
+<h1 align="center">Vision SDK</h1>
+
+
+[![VisionSDK: 2.5.3](https://img.shields.io/badge/Vision.SDK-%200.0.1.beta.20220304142741-brightgreen.svg)](https://github.com/kredibel-id/VisionSample-Android/)  
 
 ### Support API Level
 
