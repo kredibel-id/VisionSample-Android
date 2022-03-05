@@ -29,12 +29,12 @@ class MainActivity : AppCompatActivity() {
             Vision.with(this)
                 .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN))
                 .listener(object : VisionListener{
-                    override fun onSuccess(p0: MutableList<LivenessResult>?, p1: OcrResult?) {
+                    override fun onSuccess(livenessResult: MutableList<LivenessResult>?, ocrResult: OcrResult?) {
 
                     }
 
-                    override fun onError(p0: String?) {
-                        showMessage(p0!!)
+                    override fun onError(s: String?) {
+                        showMessage(s!!)
                     }
                 })
                 .onSuccessPage(MainActivity::class.java)  // optional

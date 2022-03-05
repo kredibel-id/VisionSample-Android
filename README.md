@@ -43,14 +43,14 @@ Vision.with(this)
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
     .listener(object : VisionListener{
-        override fun onSuccess(p0: MutableList<LivenessResult>?, p1: OcrResult?) {
+        override fun onSuccess(livenessResult: MutableList<LivenessResult>?, ocrResult: OcrResult?) {
 
         }
 
-        override fun onError(p0: String?) {
-            showMessage(p0!!)
-                    }
-        })          // listener, optional
+        override fun onError(s: String?) {
+            showMessage(s!!)
+        }
+    })          // listener, optional
     .onSuccessPage(SecondActivity::class.java) // optional
     .showContour(true)     // optional
     .showLabel(true)       // optional
