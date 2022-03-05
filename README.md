@@ -154,6 +154,7 @@ Vision.with(this)
 ```
 ### Optional Features   
 Some optional features that you can use.   
+
 Kotlin
 ```kotlin
 Vision.with(this)
