@@ -152,7 +152,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start();
 ```
-### Optional Reatures   
+### Optional Features   
 Some optional features that you can use.
 Kotlin
 ```kotlin
