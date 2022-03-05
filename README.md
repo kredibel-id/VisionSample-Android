@@ -1,6 +1,26 @@
 # VisionSample-Android
 An example of implementing liveness detection and ocr on an android application using Kredibel-Vision-SDK.
 
+## Gradle
+Add this repository declaration to gradle script on project level.
+
+```groovy
+repositories {
+    …
+    …
+    maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this
+}
+```
+
+
+Add this dependency to gradle script on app module.
+```groovy
+dependencies {
+    implementation 'io.kredibel:vision:0.0.1-beta-20220304142741' // <—-- add this
+}
+```
+
+
 ## Liveness Detection
 
 - Single Detection (Basic Implementation)
@@ -21,7 +41,7 @@ Vision.with(this)
         override fun onError(p0: String?) {
             showMessage(p0!!)
                     }
-        }) // optional
+        })          // listener, optional
     .onSuccessPage(SecondActivity::class.java) // optional
     .showContour(true)     // optional
     .showLabel(true)       // optional
