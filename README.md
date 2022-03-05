@@ -14,7 +14,7 @@ A sample project of implementing **Liveness Detection** and **Identity OCR** on 
 
 ### Gradle
 #### 1. Add kredibel repository.
-You can do this in several alternative ways.
+You can do this in two alternative ways.
 - In the build.gradle file at Project level. 
 ```groovy
 allprojects {
@@ -37,19 +37,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "YourProjectName"
 include ':app'
-```
-- Or you can also add a repository to the app module along with its dependencies. But if you do this way, you must remove dependencyResolutionManagement in setting.gradle.
-
-```groovy
-dependencies {
-    implementation 'io.kredibel:vision:0.0.1-beta-20220217203502' // <—-- add this
-}
-
-repositories {
-    google()
-    mavenCentral()
-    maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // and add this
-}
 ```
 
 #### 2. Add this dependency to gradle script on app module.
