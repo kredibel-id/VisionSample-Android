@@ -79,17 +79,18 @@ Vision.with(this)
     })          
     .delay(2000)  // milliseconds, optional. Default = 1000
     .onSuccessPage(SecondActivity::class.java) // optional
-    .showContour(true)                         // optional
-    .showLabel(true)                           // optional
-    .showBoundingBox(true)                     // optional
+    .finishOnSuccess(true) // optional, for auto destroy current activity/context after liveness/ocr process.
+    .showContour(true)     // optional
+    .showLabel(true)       // optional
+    .showBoundingBox(true) // optional
     .start()
 ```
 ### Identity OCR
 
 ```kotlin
 Vision.with(this)
-    .identity(Identity.KTP)                   // required
-    .showOCRLastResult(true)                  // optional
+    .identity(Identity.KTP)  // required. Identity type.
+    .showOCRLastResult(true) // optional
     .onSuccessPage(MainActivity::class.java)  // optional
     .start()
 ```
