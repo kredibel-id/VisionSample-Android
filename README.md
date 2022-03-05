@@ -71,20 +71,20 @@ Example:
 ### Liveness Detection
 
 - Single Detection (Basic Implementation)
-##### Kotlin
+Kotlin
 ```kotlin
 Vision.with(this)
     .detection(Detection.SMILE) // required
     .start()
 ```
-##### Java
-```java
+Java
+```kotlin
 Vision.with(this)
     .detection(Detection.SMILE) // required
     .start();
 ```
 - Multiple Detection
-##### Kotlin
+Kotlin
 ```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
@@ -105,8 +105,8 @@ Vision.with(this)
     .showBoundingBox(true) // optional
     .start()
 ```
-##### Java
-```java
+Java
+```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
     .listener(new VisionListener() {
@@ -129,7 +129,7 @@ Vision.with(this)
     .start();
 ```
 ### Identity OCR
-##### Kotlin
+Kotlin
 ```kotlin
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
@@ -137,8 +137,8 @@ Vision.with(this)
     .onSuccessPage(MainActivity::class.java)  // optional
     .start()
 ```
-##### Java
-```java
+Java
+```kotlin
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
     .showOCRLastResult(true) // optional
