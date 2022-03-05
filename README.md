@@ -1,5 +1,5 @@
 # VisionSample-Android
-An example of implementing liveness detection and ocr on an android application using Kredibel-Vision-SDK.
+An example of implementing **_Liveness Detection_** and **_Identity OCR_** on an android application using **_Kredibel-Vision-SDK_**.
 
 ## Gradle
 Add this repository declaration to gradle script on project level.
