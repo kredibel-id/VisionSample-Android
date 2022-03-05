@@ -4,7 +4,7 @@
 <img align="center" width="200" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
 </p>
 
-A sample project of implementing **_Liveness Detection_** and **_Identity OCR_** on Android app using **_Kredibel-Vision-SDK_**.
+A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.
 
 ### Support API Level
 
