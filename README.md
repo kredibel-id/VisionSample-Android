@@ -17,8 +17,8 @@ Add this repository declaration to gradle script on project level.
 
 ```groovy
 repositories {
-    …
-    …
+    mavenCentral()
+    google()
     maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- Add this
 }
 ```
@@ -27,7 +27,8 @@ repositories {
 Add this dependency to gradle script on app module.
 ```groovy
 dependencies {
-    implementation 'io.kredibel:vision:0.0.1-beta-20220304142741' // <—-- Add this. Please check the latest version.
+    implementation 'io.kredibel:vision:0.0.1-beta-20220304142741' // <—-- Add this. 
+    // Please check the latest version.
 }
 ```
 ### Access Token
