@@ -6,7 +6,7 @@ You can checkout the source code of this project.
 ```text
 git clone https://github.com/kredibel-id/VisionSample-Android.git
 ```
-then open it with Android Studio or Intellij IDEA.
+then open this sample project with Android Studio or Intellij IDEA.
 <br/><br/><br/><br/>
 
 <p align="center">  
