@@ -88,6 +88,31 @@ Vision.with(this)
 Kotlin
 ```kotlin
 Vision.with(this)
+    .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT)) // required
+    .delay(2000)  // milliseconds, optional. Default = 1000
+    .start()
+```
+Java
+```kotlin
+Vision.with(this)
+    .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT}) // required
+    .delay(2000)  // milliseconds, optional. Default = 1000
+    .start();
+```
+### Identity OCR
+Kotlin
+```kotlin
+Vision.with(this)
+    .identity(Identity.KTP)  // required. Identity type.
+    .showOCRLastResult(true) // optional
+    .onSuccessPage(MainActivity::class.java)  // optional
+    .start()
+```
+### Using VisionListener
+You can use Vision Listener for capture all detection results and or add a custom action.
+Kotlin
+```kotlin
+Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
     .listener(object : VisionListener{   // listener, optional on Liveness & OCR
         override fun onSuccess(livenessResult: MutableList<LivenessResult>?, ocrResult: OcrResult?) {
@@ -99,11 +124,6 @@ Vision.with(this)
         }
     })          
     .delay(2000)  // milliseconds, optional. Default = 1000
-    .onSuccessPage(SecondActivity::class.java) // optional
-    .finishOnSuccess(true) // optional, for auto destroy current activity/context after liveness/ocr process.
-    .showContour(true)     // optional
-    .showLabel(true)       // optional
-    .showBoundingBox(true) // optional
     .start()
 ```
 Java
@@ -122,21 +142,33 @@ Vision.with(this)
         }
      })        
     .delay(2000)  // milliseconds, optional. Default = 1000
+    .start();
+```
+### Optional Reatures
+Some optional features that you can use.
+Kotlin
+```kotlin
+Vision.with(this)
+    .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
+    .delay(2000)  // milliseconds, optional. Default = 1000
+    .onSuccessPage(SecondActivity::class.java) // optional
+    .finishOnSuccess(true) // optional, for auto destroy current activity/context after liveness/ocr process.
+    .showContour(true)     // optional
+    .showLabel(true)       // optional
+    .showBoundingBox(true) // optional
+    .start()
+```
+Java
+```kotlin
+Vision.with(this)
+    .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN}) // required  
+    .delay(2000)  // milliseconds, optional. Default = 1000
     .onSuccessPage(SecondActivity.class) // optional
     .finishOnSuccess(true) // optional, for auto destroy current activity/context after liveness/ocr process.
     .showContour(true)     // optional
     .showLabel(true)       // optional
     .showBoundingBox(true) // optional
     .start();
-```
-### Identity OCR
-Kotlin
-```kotlin
-Vision.with(this)
-    .identity(Identity.KTP)  // required. Identity type.
-    .showOCRLastResult(true) // optional
-    .onSuccessPage(MainActivity::class.java)  // optional
-    .start()
 ```
 Java
 ```kotlin
