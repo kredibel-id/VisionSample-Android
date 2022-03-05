@@ -116,7 +116,7 @@ Vision.with(this)
     .onSuccessPage(MainActivity.class)  // optional
     .start();
 ```
-### Using VisionListener
+### Using VisionListener   
 You can use Vision Listener for capture all detection results and or add a custom action.
 Kotlin
 ```kotlin
@@ -152,7 +152,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start();
 ```
-### Optional Reatures
+### Optional Reatures   
 Some optional features that you can use.
 Kotlin
 ```kotlin
