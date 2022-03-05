@@ -19,7 +19,16 @@ dependencies {
     implementation 'io.kredibel:vision:0.0.1-beta-20220304142741' // <—-- add this
 }
 ```
+## Access Token
+Please contact our sales team to get the token/api key.
 
+Add a meta tag named kredibel-apikey in the scope of the **`<application></application>`** on your AndroidManifest.xml.   
+Example:
+```xml
+<meta-data
+    android:name="kredibel-apikey"
+    android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCw bla.. Bla.. bla.."/> 
+```
 
 ## Liveness Detection
 
