@@ -73,7 +73,7 @@ Example:
 #### 1. Single Detection (Basic Implementation)   
 Kotlin
 ```kotlin
-Vision.with(this)
+Vision.with(this) // Context, required
     .detection(Detection.SMILE) // required
     .start()
 ```
