@@ -77,6 +77,7 @@ Vision.with(this)
             showMessage(s!!)
         }
     })          
+    .delay(2000)  // milliseconds, optional. Default = 1000
     .onSuccessPage(SecondActivity::class.java) // optional
     .showContour(true)                         // optional
     .showLabel(true)                           // optional
