@@ -117,7 +117,8 @@ Vision.with(this)
     .start();
 ```
 ### Using VisionListener   
-You can use Vision Listener for capture all detection results and or add a custom action.
+You can use Vision Listener for capture all detection results and or add a custom action.  
+
 Kotlin
 ```kotlin
 Vision.with(this)
