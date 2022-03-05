@@ -1,15 +1,12 @@
 # VisionSample-Android
 An example of implementing **_Liveness Detection_** and **_Identity OCR_** on an android application using **_Kredibel-Vision-SDK_**.
-
-<img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/on-detecting.png?raw=true"/> <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ktp-ocr.png?raw=true"/>
-
-## Support API Level
+### Support API Level
 
 | Min Support                 | Max Support        |
 |-----------------------------|--------------------|
 | API 19/ Android 4.4/ KitKat | API 31/ Android 12 |
 
-## Gradle
+### Gradle
 Add this repository declaration to gradle script on project level.
 
 ```groovy
@@ -27,7 +24,7 @@ dependencies {
     implementation 'io.kredibel:vision:0.0.1-beta-20220304142741' // <—-- Add this. Please check the latest version.
 }
 ```
-## Access Token
+### Access Token
 Please contact our sales team to get the token/api key.
 
 Add a meta tag named kredibel-apikey in the scope of the **`<application></application>`** on your AndroidManifest.xml.   
@@ -38,7 +35,7 @@ Example:
     android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCw bla.. Bla.. bla.."/> 
 ```
 
-## Liveness Detection
+### Liveness Detection
 
 - Single Detection (Basic Implementation)
 ```kotlin
@@ -65,7 +62,7 @@ Vision.with(this)
     .showBoundingBox(true)                     // optional
     .start()
 ```
-## Identity OCR
+### Identity OCR
 
 ```kotlin
 Vision.with(this)
@@ -74,3 +71,7 @@ Vision.with(this)
     .onSuccessPage(MainActivity::class.java)  // optional
     .start()
 ```
+
+
+<img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/on-detecting.png?raw=true"/> <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ktp-ocr.png?raw=true"/>
+
