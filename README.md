@@ -1,10 +1,21 @@
 # VisionSample-Android
-[![KredibelVisionSDK: 2.5.3](https://img.shields.io/badge/Kredibel.Vision.SDK-%200.0.1.beta.20220304142741-brightgreen.svg)](https://github.com/kredibel-id/VisionSample-Android/)  
-<p align="center">
-<img align="center" width="200" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
-</p>
 
-An example of implementing **_Liveness Detection_** and **_Identity OCR_** on an android application using **_Kredibel-Vision-SDK_**.
+A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.
+You can checkout the source code of this project.
+#### Checkout
+```text
+git clone https://github.com/kredibel-id/VisionSample-Android.git
+```
+then open this sample project with Android Studio or Intellij IDEA.
+<br/><br/><br/><br/>
+
+<p align="center">  
+    <img align="center" width="200" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
+</p>
+<h1 align="center">Vision SDK</h1>
+
+
+[![VisionSDK: 2.5.3](https://img.shields.io/badge/Vision.SDK-%200.0.1.beta.20220304142741-brightgreen.svg)](https://github.com/kredibel-id/VisionSample-Android/)  
 
 ### Support API Level
 
@@ -13,24 +24,39 @@ An example of implementing **_Liveness Detection_** and **_Identity OCR_** on an
 | API 19/ Android 4.4/ KitKat | API 31/ Android 12 |
 
 ### Gradle
-Add this repository declaration to gradle script on project level.
-
+#### 1. Add kredibel repository.
+You can do this in two alternative ways.
+- In the build.gradle file at Project level. 
 ```groovy
-repositories {
-    mavenCentral()
-    google()
-    maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- Add this
+allprojects {
+    repositories {
+       google()
+       mavenCentral()
+       maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this 
+    }
 }
 ```
+- Or in dependencyResolutionManagement in setting.gradle.
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this
+    }
+}
+rootProject.name = "YourProjectName"
+include ':app'
+```
 
-
-Add this dependency to gradle script on app module.
+#### 2. Add this dependency to gradle script on app module.
 ```groovy
 dependencies {
-    implementation 'io.kredibel:vision:0.0.1-beta-20220304142741' // <—-- Add this. 
-    // Please check the latest version.
+    implementation 'io.kredibel:vision:0.0.1-beta' // <—-- Add this. Please check the latest version.
 }
 ```
+Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
 ### Access Token
 Please contact our sales team to get the token/api key.
 
@@ -45,12 +71,20 @@ Example:
 ### Liveness Detection
 
 - Single Detection (Basic Implementation)
+##### Kotlin
 ```kotlin
 Vision.with(this)
     .detection(Detection.SMILE) // required
     .start()
 ```
+##### Java
+```java
+Vision.with(this)
+    .detection(Detection.SMILE) // required
+    .start();
+```
 - Multiple Detection
+##### Kotlin
 ```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
@@ -63,20 +97,53 @@ Vision.with(this)
             showMessage(s!!)
         }
     })          
+    .delay(2000)  // milliseconds, optional. Default = 1000
     .onSuccessPage(SecondActivity::class.java) // optional
-    .showContour(true)                         // optional
-    .showLabel(true)                           // optional
-    .showBoundingBox(true)                     // optional
+    .finishOnSuccess(true) // optional, for auto destroy current activity/context after liveness/ocr process.
+    .showContour(true)     // optional
+    .showLabel(true)       // optional
+    .showBoundingBox(true) // optional
     .start()
 ```
-### Identity OCR
+##### Java
+```java
+Vision.with(this)
+    .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
+    .listener(new VisionListener() {
+        @Override
+        public void onSuccess(List<LivenessResult> list, OcrResult ocrResult) {
 
+        }
+
+        @Override
+        public void onError(String s) {
+
+        }
+     })        
+    .delay(2000)  // milliseconds, optional. Default = 1000
+    .onSuccessPage(SecondActivity.class) // optional
+    .finishOnSuccess(true) // optional, for auto destroy current activity/context after liveness/ocr process.
+    .showContour(true)     // optional
+    .showLabel(true)       // optional
+    .showBoundingBox(true) // optional
+    .start();
+```
+### Identity OCR
+##### Kotlin
 ```kotlin
 Vision.with(this)
-    .identity(Identity.KTP)                   // required
-    .showOCRLastResult(true)                  // optional
+    .identity(Identity.KTP)  // required. Identity type.
+    .showOCRLastResult(true) // optional
     .onSuccessPage(MainActivity::class.java)  // optional
     .start()
+```
+##### Java
+```java
+Vision.with(this)
+    .identity(Identity.KTP)  // required. Identity type.
+    .showOCRLastResult(true) // optional
+    .onSuccessPage(MainActivity.class)  // optional
+    .start();
 ```
 
 
