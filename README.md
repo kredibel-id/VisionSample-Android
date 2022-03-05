@@ -38,6 +38,19 @@ dependencyResolutionManagement {
 rootProject.name = "YourProjectName"
 include ':app'
 ```
+- Or you can also add a repository to the app module along with its dependencies. But if you do this way, you must remove dependencyResolutionManagement in setting.gradle.
+
+```groovy
+dependencies {
+    implementation 'io.kredibel:vision:0.0.1-beta-20220217203502' // <—-- add this
+}
+
+repositories {
+    google()
+    mavenCentral()
+    maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // and add this
+}
+```
 
 #### 2. Add this dependency to gradle script on app module.
 ```groovy
