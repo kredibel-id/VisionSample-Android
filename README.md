@@ -44,7 +44,7 @@ Vision.with(this)
 ```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
-    .listener(object : VisionListener{
+    .listener(object : VisionListener{          // listener, optional
         override fun onSuccess(livenessResult: MutableList<LivenessResult>?, ocrResult: OcrResult?) {
 
         }
@@ -52,19 +52,19 @@ Vision.with(this)
         override fun onError(s: String?) {
             showMessage(s!!)
         }
-    })          // listener, optional
+    })          
     .onSuccessPage(SecondActivity::class.java) // optional
-    .showContour(true)     // optional
-    .showLabel(true)       // optional
-    .showBoundingBox(true) // optional
+    .showContour(true)                         // optional
+    .showLabel(true)                           // optional
+    .showBoundingBox(true)                     // optional
     .start()
 ```
 ## Identity OCR
 
 ```kotlin
 Vision.with(this)
-    .identity(Identity.KTP)  // required
-    .showOCRLastResult(true) // optional
+    .identity(Identity.KTP)                   // required
+    .showOCRLastResult(true)                  // optional
     .onSuccessPage(MainActivity::class.java)  // optional
     .start()
 ```
