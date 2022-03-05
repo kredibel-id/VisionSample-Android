@@ -146,6 +146,8 @@ Vision.with(this)
     .onSuccessPage(MainActivity.class)  // optional
     .start();
 ```
+<img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/on-detecting.png?raw=true"/> <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ktp-ocr.png?raw=true"/>
+
 ### Customizing instruction
 You can customize instructions and some text by adding the following string resource to your project. Add only the strings you need and make sure the string name is correct, don't be mistaken.
 
@@ -200,5 +202,4 @@ You can customize instructions and some text by adding the following string reso
 </string>
 ```
 
-<img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/on-detecting.png?raw=true"/> <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ktp-ocr.png?raw=true"/>
 
