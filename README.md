@@ -70,7 +70,7 @@ Example:
 
 ### Liveness Detection
 
-- Single Detection (Basic Implementation)
+- Single Detection (Basic Implementation)   
 Kotlin
 ```kotlin
 Vision.with(this)
@@ -83,7 +83,8 @@ Vision.with(this)
     .detection(Detection.SMILE) // required
     .start();
 ```
-- Multiple Detection
+- Multiple Detection     
+
 Kotlin
 ```kotlin
 Vision.with(this)
