@@ -70,7 +70,7 @@ Example:
 
 ### Liveness Detection
 
-- Single Detection (Basic Implementation)   
+#### 1. Single Detection (Basic Implementation)   
 Kotlin
 ```kotlin
 Vision.with(this)
@@ -83,15 +83,15 @@ Vision.with(this)
     .detection(Detection.SMILE) // required
     .start();
 ```
-- Multiple Detection     
+#### 2. Multiple Detection     
 
 Kotlin
 ```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
-    .listener(object : VisionListener{          // listener, optional
+    .listener(object : VisionListener{   // listener, optional on Liveness & OCR
         override fun onSuccess(livenessResult: MutableList<LivenessResult>?, ocrResult: OcrResult?) {
-
+            // if you want to capture all detection results and or add a custom action.
         }
 
         override fun onError(s: String?) {
@@ -110,10 +110,10 @@ Java
 ```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
-    .listener(new VisionListener() {
+    .listener(new VisionListener() { // listener, optional on Liveness & OCR
         @Override
         public void onSuccess(List<LivenessResult> list, OcrResult ocrResult) {
-
+            // if you want to capture all detection results and or add a custom action.
         }
 
         @Override
