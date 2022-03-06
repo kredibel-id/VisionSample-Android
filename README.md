@@ -26,7 +26,7 @@ then open this sample project with Android Studio or Intellij IDEA.
 ### Gradle
 #### 1. Add kredibel repository.
 You can do this in two alternative ways.
-- Latest way : Or in dependencyResolutionManagement in setting.gradle.
+- Latest way : Add repository in dependencyResolutionManagement in setting.gradle.
 ```groovy
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -39,7 +39,7 @@ dependencyResolutionManagement {
 rootProject.name = "YourProjectName"
 include ':app'
 ```
-- Old way : In the build.gradle file at Project level. 
+- Old way : Add repository in build.gradle file at Project level. Don't forget to remove dependencyResolutionManagement, if you use this way.
 ```groovy
 allprojects {
     repositories {
