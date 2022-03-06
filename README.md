@@ -14,7 +14,7 @@ then open this sample project with Android Studio or Intellij IDEA.
 </p>
 <h1 align="center">Vision SDK</h1>
 
-[![VisionSDK: 2.5.3](https://img.shields.io/badge/Vision.SDK-%200.0.1.beta.20220304142741-brightgreen.svg)](https://github.com/kredibel-id/VisionSample-Android/)  
+[![VisionSDK: 2.5.3](https://img.shields.io/badge/Vision%20SDK-%200.0.1.beta.20220304142741-brightgreen.svg)](https://github.com/kredibel-id/VisionSample-Android/)  
 
 ### Support API Level
 
