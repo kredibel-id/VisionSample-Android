@@ -1,4 +1,4 @@
-# VisionSample-Android  
+# Vision Sample (Android)   
 ![jdk](https://img.shields.io/badge/JDK-1.8-red) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%23C800DA) ![material](https://img.shields.io/badge/Material-1.5.0-brightgreen) ![appcompat](https://img.shields.io/badge/AppCompat-1.4.1-%23EE76D0) ![vision](https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220304142741-%230169FF)   
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.
 You can checkout the source code of this project.
