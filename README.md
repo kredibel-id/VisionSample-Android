@@ -26,17 +26,7 @@ then open this sample project with Android Studio or Intellij IDEA.
 ### Gradle
 #### 1. Add kredibel repository.
 You can do this in two alternative ways.
-- In the build.gradle file at Project level. 
-```groovy
-allprojects {
-    repositories {
-       google()
-       mavenCentral()
-       maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this 
-    }
-}
-```
-- Or in dependencyResolutionManagement in setting.gradle.
+- Latest way : Or in dependencyResolutionManagement in setting.gradle.
 ```groovy
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -49,11 +39,21 @@ dependencyResolutionManagement {
 rootProject.name = "YourProjectName"
 include ':app'
 ```
+- Old way : In the build.gradle file at Project level. 
+```groovy
+allprojects {
+    repositories {
+       google()
+       mavenCentral()
+       maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this 
+    }
+}
+```
 
 #### 2. Add this dependency to gradle script on app module.
 ```groovy
 dependencies {
-    implementation 'io.kredibel:vision:0.0.1-beta' // <—-- Add this. Please check the latest version.
+    implementation 'io.kredibel:vision:<latest version>' // <—-- Add this.
 }
 ```
 Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
