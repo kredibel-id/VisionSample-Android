@@ -14,7 +14,6 @@ then open this sample project with Android Studio or Intellij IDEA.
 </p>
 <h1 align="center">Vision SDK</h1>
 
-
 [![VisionSDK: 2.5.3](https://img.shields.io/badge/Vision.SDK-%200.0.1.beta.20220304142741-brightgreen.svg)](https://github.com/kredibel-id/VisionSample-Android/)  
 
 ### Support API Level
@@ -71,13 +70,13 @@ Example:
 ### Liveness Detection
 
 #### 1. Single Detection (Basic Implementation)   
-Kotlin
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this) // Context, required
     .detection(Detection.SMILE) // required
     .start()
 ```
-Java
+![java](https://img.shields.io/badge/-Java-brightgreen)
 ```kotlin
 Vision.with(this)
     .detection(Detection.SMILE) // required
@@ -85,14 +84,14 @@ Vision.with(this)
 ```
 #### 2. Multiple Detection     
 
-Kotlin
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT)) // required
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start()
 ```
-Java
+![java](https://img.shields.io/badge/-Java-brightgreen)
 ```kotlin
 Vision.with(this)
     .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT}) // required
@@ -100,7 +99,7 @@ Vision.with(this)
     .start();
 ```
 ### Identity OCR
-Kotlin
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
@@ -108,7 +107,7 @@ Vision.with(this)
     .onSuccessPage(MainActivity::class.java)  // optional
     .start()
 ```
-Java
+![java](https://img.shields.io/badge/-Java-brightgreen)
 ```kotlin
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
@@ -119,7 +118,7 @@ Vision.with(this)
 ### Using VisionListener   
 You can use Vision Listener for capture all detection results and or add a custom action.  
 
-Kotlin
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
@@ -135,7 +134,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start()
 ```
-Java
+![java](https://img.shields.io/badge/-Java-brightgreen)
 ```kotlin
 Vision.with(this)
     .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN}) // required
@@ -156,7 +155,7 @@ Vision.with(this)
 ### Optional Features   
 Some optional features that you can use.   
 
-Kotlin
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
@@ -168,7 +167,7 @@ Vision.with(this)
     .showBoundingBox(true) // optional
     .start()
 ```
-Java
+![java](https://img.shields.io/badge/-Java-brightgreen)
 ```kotlin
 Vision.with(this)
     .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN}) // required  
