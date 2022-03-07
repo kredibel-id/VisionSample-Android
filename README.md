@@ -19,7 +19,6 @@ Then open this sample project with Android Studio or Intellij IDEA.<hr/>
 ### Introduction
 Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
 
-Currently the Vision SDK can only be used on the Android platform.  
 ##### Liveness Detection
 
 1. Examine the digital representation of the user's face from the camera preview in realtime.
@@ -39,6 +38,7 @@ Identity OCR is an Optical Character Recognition (OCR) service that supports thr
     <img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
 </p>
 
+Currently the Vision SDK can only be used on the Android platform.  
 ### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-green) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-green)
 
