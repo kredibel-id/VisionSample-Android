@@ -16,7 +16,10 @@ Then open this sample project with Android Studio or Intellij IDEA.<hr/>
     <img src="https://img.shields.io/badge/Version-0.0.1--beta--20220304142741-%230169FF"/>
 </p>
 
-  
+### Introduction
+The Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
+
+Currently the Vision SDK can only be used on the Android platform.  
 
 ### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-green) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-green)
@@ -68,6 +71,10 @@ Example:
 
 ### Liveness Detection
 
+1. Examine the digital representation of the user's face from the camera preview in realtime.
+2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
+3. Determine whether it is a living person or not.
+
 #### 1. Single Detection (Basic Implementation)   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
@@ -98,6 +105,11 @@ Vision.with(this)
     .start();
 ```
 ### Identity OCR
+Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
+1. National Identity (KTP)
+2. Driving License (SIM)
+3. Passport   
+
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
