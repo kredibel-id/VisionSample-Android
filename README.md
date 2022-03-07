@@ -17,7 +17,7 @@ Then open this sample project with Android Studio or Intellij IDEA.<hr/>
 </p>
 
 ### Introduction
-The Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
+Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
 
 Currently the Vision SDK can only be used on the Android platform.  
 
