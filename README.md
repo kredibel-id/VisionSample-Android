@@ -20,8 +20,23 @@ Then open this sample project with Android Studio or Intellij IDEA.<hr/>
 Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
 
 Currently the Vision SDK can only be used on the Android platform.  
+##### Liveness Detection
+
+1. Examine the digital representation of the user's face from the camera preview in realtime.
+2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
+3. Determine whether it is a living person or not.
 <p align="center"> 
-<img width="400" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/><img width="400" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
+<img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/>
+</p>
+
+##### Identity OCR
+Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
+1. National Identity (KTP)
+2. Driving License (SIM)
+3. Passport 
+
+<p align="center">
+    <img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
 </p>
 
 ### Support API Level
@@ -72,12 +87,7 @@ Example:
     android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCw bla.. Bla.. bla.."/> 
 ```
 
-### Liveness Detection
-
-1. Examine the digital representation of the user's face from the camera preview in realtime.
-2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
-3. Determine whether it is a living person or not.
-
+### Liveness Detection   
 #### 1. Single Detection (Basic Implementation)   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
@@ -107,12 +117,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start();
 ```
-### Identity OCR
-Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
-1. National Identity (KTP)
-2. Driving License (SIM)
-3. Passport   
-
+### Identity OCR   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
