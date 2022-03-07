@@ -20,6 +20,9 @@ Then open this sample project with Android Studio or Intellij IDEA.<hr/>
 Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
 
 Currently the Vision SDK can only be used on the Android platform.  
+<p align="center"> 
+<img width="400" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/><img width="400" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
+</p>
 
 ### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-green) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-green)
@@ -190,7 +193,6 @@ Vision.with(this)
     .showBoundingBox(true) // optional
     .start();
 ```
-<img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/on-detecting.png?raw=true"/> <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ktp-ocr.png?raw=true"/>
 
 ### Customizing instruction
 You can customize instructions and some text by adding the following string resource to your project. Add only the strings you need and make sure the string name is correct, don't be mistaken.
