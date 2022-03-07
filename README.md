@@ -74,7 +74,7 @@ Vision.with(this) // Context, required
     .detection(Detection.SMILE) // required
     .start()
 ```
-![java](https://img.shields.io/badge/-Java-brightgreen)
+![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
 Vision.with(this)
     .detection(Detection.SMILE) // required
@@ -89,7 +89,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start()
 ```
-![java](https://img.shields.io/badge/-Java-brightgreen)
+![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
 Vision.with(this)
     .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT}) // required
@@ -105,7 +105,7 @@ Vision.with(this)
     .onSuccessPage(MainActivity::class.java)  // optional
     .start()
 ```
-![java](https://img.shields.io/badge/-Java-brightgreen)
+![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
@@ -132,7 +132,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start()
 ```
-![java](https://img.shields.io/badge/-Java-brightgreen)
+![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
 Vision.with(this)
     .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN}) // required
@@ -165,7 +165,7 @@ Vision.with(this)
     .showBoundingBox(true) // optional
     .start()
 ```
-![java](https://img.shields.io/badge/-Java-brightgreen)
+![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
 Vision.with(this)
     .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN}) // required  
