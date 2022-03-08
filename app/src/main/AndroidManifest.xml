@@ -10,6 +10,9 @@
       android:supportsRtl="true"
       android:theme="@style/Theme.VisionSample">
     <activity
+        android:name=".CustomOCRActivity"
+        android:exported="true"/>
+    <activity
         android:name=".CustomLivenessActivity"
         android:exported="true"/>
     <activity

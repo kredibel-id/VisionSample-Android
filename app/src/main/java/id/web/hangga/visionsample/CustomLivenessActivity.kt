@@ -54,6 +54,11 @@ class CustomLivenessActivity : VisionActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        livenessView.stop()
+    }
+
     fun showMessage(s: String?){
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
     }

@@ -50,6 +50,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CustomLivenessActivity::class.java)
             startActivity(intent)
         }
+
+        findViewById<Button>(R.id.btnCustomOcr).setOnClickListener {
+            val intent = Intent(this, CustomOCRActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun showMessage(s : String){
