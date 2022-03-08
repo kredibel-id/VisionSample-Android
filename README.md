@@ -41,7 +41,7 @@ Identity OCR is an Optical Character Recognition (OCR) service that supports thr
 </p>
 
 Currently the Vision SDK can only be used on the Android platform.  
-#### Support API Level
+##### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-%233DDC84?logo=android) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-%233DDC84?logo=android)
 ## Install/ Setup
 ### Gradle
