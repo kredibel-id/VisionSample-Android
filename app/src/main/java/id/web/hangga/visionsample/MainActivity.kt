@@ -1,6 +1,7 @@
 package id.web.hangga.visionsample
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -15,17 +16,11 @@ import io.kredibel.vision.VisionListener
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var btnLiveness: Button
-    lateinit var btnOcr : Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btnLiveness = findViewById(R.id.btnLiveness)
-        btnOcr = findViewById(R.id.btnOcr)
 
-
-        btnLiveness.setOnClickListener {
+        findViewById<Button>(R.id.btnLiveness).setOnClickListener {
             Vision.with(this)
                 .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN))
                 .listener(object : VisionListener{
@@ -44,11 +39,16 @@ class MainActivity : AppCompatActivity() {
                 .start()
         }
 
-        btnOcr.setOnClickListener{
+        findViewById<Button>(R.id.btnOcr).setOnClickListener{
             Vision.with(this)
                 .identity(Identity.KTP)
                 .showOCRLastResult(true)
                 .start()
+        }
+
+        findViewById<Button>(R.id.btnCustomLiveness).setOnClickListener{
+            val intent = Intent(this, CustomLivenessActivity::class.java)
+            startActivity(intent)
         }
     }
 

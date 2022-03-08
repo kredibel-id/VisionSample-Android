@@ -12,8 +12,7 @@
       android:layout_height="wrap_content"
       android:text="Liveness!"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="100dp"
-  />
+      android:layout_marginTop="100dp"/>
 
   <Button
       android:id="@+id/btnOcr"
@@ -22,7 +21,24 @@
       android:layout_height="wrap_content"
       android:text="OCR!"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="20dp"
-  />
+      android:layout_marginTop="20dp"/>
+
+  <Button
+      android:id="@+id/btnCustomLiveness"
+      android:layout_below="@+id/btnOcr"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Custom Liveness!"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="20dp"/>
+
+  <Button
+      android:id="@+id/btnCustomOcr"
+      android:layout_below="@+id/btnCustomLiveness"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Custom OCR!"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="20dp"/>
 
 </RelativeLayout>

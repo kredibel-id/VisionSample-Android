@@ -1,15 +1,24 @@
 package id.web.hangga.visionsample
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import io.kredibel.vision.*
 
 class CustomLivenessActivity : VisionActivity() {
 
     lateinit var livenessView : LivenessCameraView
+    lateinit var imgIcResult : ImageView
+    lateinit var txtLabel : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom_liveness)
+        imgIcResult = findViewById(R.id.imgIcResult)
+        txtLabel = findViewById(R.id.txtLabel)
+
         livenessView = findViewById(R.id.livenessView)
         livenessView.setDetections(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT))
         livenessView.setLivenessDetectionListener(listener)
@@ -18,23 +27,34 @@ class CustomLivenessActivity : VisionActivity() {
 
     val listener  = object : LivenessDetectionListener {
         override fun onError(message: String?) {
-            TODO("Not yet implemented")
+            showMessage(message)
         }
 
+        @SuppressLint("SetTextI18n")
         override fun onPrepare(isLoading: Boolean) {
-            TODO("Not yet implemented")
+            txtLabel.text = "Tunggu sebentar.."
         }
 
+        @SuppressLint("SetTextI18n")
         override fun onDetecting(isDetection: Boolean, detection: String?) {
-            TODO("Not yet implemented")
+            if (isDetection) {
+                txtLabel.text = "Please " + detection?.uppercase()
+            } else {
+                txtLabel.text = "Pastikan wajah Anda berada di frame."
+            }
         }
 
         override fun onEachCompleted(livenessResult: LivenessResult?) {
-            TODO("Not yet implemented")
+            showMessage(livenessResult?.value.toString())
         }
 
+        @SuppressLint("SetTextI18n")
         override fun onAllCompleted(livenessResults: MutableList<LivenessResult>?) {
-            TODO("Not yet implemented")
+            txtLabel.text = "Selesai.."
         }
+    }
+
+    fun showMessage(s: String?){
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
     }
 }

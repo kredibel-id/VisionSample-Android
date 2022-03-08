@@ -6,15 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".CustomLivenessActivity">
 
-    <io.kredibel.vision.LivenessCameraView
-        android:id="@+id/livenessView"
+    <RelativeLayout
+        android:id="@+id/previewContainer"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_alignParentTop="true"
-        android:foregroundGravity="center" />
+        android:layout_height="500dp">
+        <io.kredibel.vision.LivenessCameraView
+            android:id="@+id/livenessView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:foregroundGravity="center" />
+        <ImageView
+            android:id="@+id/imgIcResult"
+            android:layout_height="80dp"
+            android:layout_width="80dp"/>
+    </RelativeLayout>
+
+
     <TextView
         android:id="@+id/txtLabel"
-        android:layout_below="@+id/livenessView"
+        android:layout_below="@+id/previewContainer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textSize="24sp"
