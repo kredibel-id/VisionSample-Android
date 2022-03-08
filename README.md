@@ -323,26 +323,26 @@ LivenessDetectionListener is a java interface that will accommodate the results 
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
-object listener : LivenessDetectionListener {
+val listener = object : LivenessDetectionListener {
     override fun onError(message: String?) {
-            TODO("Not yet implemented")
+    	// Getting an error message if the process failed.
     }
 
     override fun onPrepare(isLoading: Boolean) {
-            TODO("Not yet implemented")
+    	// Get process preparation status.
     }
 
     override fun onDetecting(isDetection: Boolean, detection: String?) {
-            TODO("Not yet implemented")
+    	// get detection status
     }
 
     override fun onEachCompleted(livenessResult: LivenessResult?) {
-            TODO("Not yet implemented")
+    	// Get results on each detection.
     }
 
     override fun onAllCompleted(livenessResults: MutableList<LivenessResult>?) {
-            TODO("Not yet implemented")
-	}
+    	// Get all detection results.
+    }
 }
 
 livenessView.setLivenessDetectionListener(listener)
