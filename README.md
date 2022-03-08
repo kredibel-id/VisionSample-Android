@@ -86,9 +86,9 @@ Example:
     android:name="kredibel-apikey"
     android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCw bla.. Bla.. bla.."/> 
 ```
-## How to Use
+## How to Use (Basic Implementation)
 ### Liveness Detection   
-#### 1. Single Detection (Basic Implementation)   
+#### 1. Single Detection   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this) // Context, required
