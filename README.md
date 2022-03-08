@@ -409,5 +409,99 @@ livenessView.stop()
 ```kotlin
 livenessView.stop();
 ```
+### OCRCameraView
+OCRCameraView is a component which is a SurfaceView which includes a Camera controller and a OCR with Kredibel API.
+
+```xml
+<io.kredibel.vision.OCRCameraView
+   android:id="@+id/ocrPreview"
+   android:layout_width="match_parent"
+   android:layout_height="600dp"
+   android:layout_alignParentTop="true"/>
+```
+
+#### Initialize
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+val ocrPreview : OCRCameraPreview = findViewById(R.id.ocrPreview);
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)
+```kotlin
+OCRCameraPreview ocrPreview = findViewById(R.id.ocrPreview);
+```
+
+#### Start Preview
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+ocrPreview.start()
+```
+![java](https://img.shields.io/badge/-Java-%23B07119)
+```kotlin
+ocrPreview.start();
+```
+
+#### OCRCameraListener
+OCRCameraListener is a java interface that will accommodate the results of the Identity OCR process.
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+val listener = object : OCRCameraListener{
+    override fun onGetBitmap(bitmap: Bitmap?) {
+            
+    }
+
+    override fun onError(message: String?) {
+            
+    }
+
+    override fun onProgress(isLoading: Boolean) {
+            
+    }
+
+    override fun onComplete(isVerified: Boolean, ocrResult: OcrResult?) {
+            
+    }
+}
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)
+```kotlin
+OCRCameraListener listener = new OCRCameraListener() {
+   @Override
+   public void onGetBitmap(Bitmap bitmap) {
+     // Getting photo as Bitmap.
+   }
+
+   @Override
+   public void onError(String onError) {
+      //Getting an error message if the process failed.
+   }
+
+   @Override
+   public void onProgress(boolean isShow) {
+     // get process status
+   }
+
+   @Override
+   public void onComplete(boolean isSuccess, JSONObject response) {
+     // When OCR process is completed
+   }
+};
+```
+
+#### Take Identity
+Take identity and start OCR Process.   
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+ocrPreview.takeIdentity(Identity.KTP, listener)
+```
+![java](https://img.shields.io/badge/-Java-%23B07119)
+```kotlin
+ocrPreview.takeIdentity(Identity.KTP, listener)
+```
 
 
