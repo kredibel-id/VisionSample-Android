@@ -394,7 +394,7 @@ livenessView.start()
 
 ![java](https://img.shields.io/badge/-Java-%23B07119)  
 ```kotlin
-livenessView.start()
+livenessView.start();
 ```
 
 #### Stop Preview
@@ -407,7 +407,7 @@ livenessView.stop()
 
 ![java](https://img.shields.io/badge/-Java-%23B07119)  
 ```kotlin
-livenessView.stop()
+livenessView.stop();
 ```
 
 
