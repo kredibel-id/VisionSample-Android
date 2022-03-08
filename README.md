@@ -1,11 +1,13 @@
 # Vision Sample (Android)   
-![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-green) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%23C800DA) ![material](https://img.shields.io/badge/Material-1.5.0-brightgreen) ![appcompat](https://img.shields.io/badge/AppCompat-1.4.1-%23EE76D0) ![vision](https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220304142741-%230169FF)   <hr/>
+![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) ![vision](https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220304142741-%230169FF?logo=face)   
+
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.   <br/><br/>
 You can checkout the source code of this project.
 ```text
 git clone https://github.com/kredibel-id/VisionSample-Android.git
 ```
-Then open this sample project with Android Studio or Intellij IDEA.<hr/>
+Then open this sample project with Android Studio or Intellij IDEA.
+<h1></h1>
 <br/><br/><br/><br/>
 
 <p align="center">  
@@ -39,8 +41,8 @@ Identity OCR is an Optical Character Recognition (OCR) service that supports thr
 </p>
 
 Currently the Vision SDK can only be used on the Android platform.  
-#### Support API Level
-![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-green) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-green)
+##### Support API Level
+![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-%233DDC84?logo=android) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-%233DDC84?logo=android)
 ## Install/ Setup
 ### Gradle
 #### 1. Add kredibel repository.   
@@ -254,6 +256,8 @@ You can customize instructions and some text by adding the following string reso
 
 In the basic implementation, you have understood the use of the start() method in the Vision class. Really, it's the quick and easy way. 
 
+<img width="100%" src="https://1.bp.blogspot.com/-9MiK78CFMLM/YQFurOq9AII/AAAAAAAAQ1A/lKj5GiDnO_MkPLb72XqgnvD5uxOsHO-eACLcBGAsYHQ/s0/Android-Compose-1.0-header-v2.png"/>
+
 At an advanced level, you can create your own Liveness Detection Activity or OCR Activity with your own UI Design. 
 
 ### Create new Activity, then extends from VisionActivity.  
@@ -282,12 +286,11 @@ public class CustomLivenessActivity extends VisionActivity {
 ```
 
 ### LivenessCameraView
-<img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/preview.png?raw=true"/>
 LivenessCameraPreview is a component which is a SurfaceView which includes a Camera controller and a Liveness Detection Processor with Machine Learning. This component can display the camera preview and process liveness detection at the same time. 
 <br/><br/>
-Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.
+Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.   
+<br/>
 
-![xml](https://img.shields.io/badge/-xml-important)
 ```xml
 <io.kredibel.vision.LivenessCameraView
   android:id="@+id/livenessView"
@@ -300,12 +303,12 @@ Add this component to your activity or fragment layout page. Well, here you can 
 #### Initialize
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)   
 ```kotlin
-livenessView = findViewById(R.id.livenessView)
+val livenessView : LivenessCameraView = findViewById(R.id.livenessView)
 ```
 
 ![java](https://img.shields.io/badge/-Java-%23B07119)  
 ```kotlin
-livenessView = findViewById(R.id.livenessView);
+LivenessCameraView livenessView = findViewById(R.id.livenessView);
 ```
 
 #### Detection
@@ -382,7 +385,7 @@ livenessView.setLivenessDetectionListener(listener);
 ```
 
 #### Start Preview
-To start the preview, you can call the start() method.
+To start preview and Liveness Detection process, you can call the start() method.
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
@@ -391,7 +394,7 @@ livenessView.start()
 
 ![java](https://img.shields.io/badge/-Java-%23B07119)  
 ```kotlin
-livenessView.start()
+livenessView.start();
 ```
 
 #### Stop Preview
@@ -404,7 +407,7 @@ livenessView.stop()
 
 ![java](https://img.shields.io/badge/-Java-%23B07119)  
 ```kotlin
-livenessView.stop()
+livenessView.stop();
 ```
 
 
