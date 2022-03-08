@@ -287,9 +287,9 @@ public class CustomLivenessActivity extends VisionActivity {
 <img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/preview.png?raw=true"/>
 LivenessCameraPreview is a component which is a SurfaceView which includes a Camera controller and a Liveness Detection Processor with Machine Learning. This component can display the camera preview and process liveness detection at the same time. 
 <br/><br/>
-Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.
+Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.   
+<br/><br/>   
 
-![xml](https://img.shields.io/badge/-xml-important)
 ```xml
 <io.kredibel.vision.LivenessCameraView
   android:id="@+id/livenessView"
@@ -302,12 +302,12 @@ Add this component to your activity or fragment layout page. Well, here you can 
 #### Initialize
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)   
 ```kotlin
-livenessView = findViewById(R.id.livenessView)
+val livenessView : LivenessCameraView = findViewById(R.id.livenessView)
 ```
 
 ![java](https://img.shields.io/badge/-Java-%23B07119)  
 ```kotlin
-livenessView = findViewById(R.id.livenessView);
+LivenessCameraView livenessView = findViewById(R.id.livenessView);
 ```
 
 #### Detection
