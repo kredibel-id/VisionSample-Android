@@ -252,5 +252,150 @@ You can customize instructions and some text by adding the following string reso
 <string name="kv_clue_card_inframe" translatable="false">Position your identity card in the frame and in a well-lit place.
 </string>
 ```
+## Advance Implementation : Create Own Vision Activity.
+
+In the basic implementation, you have understood the use of the start() method in the Vision class. Really, it's the quick and easy way. 
+
+At an advanced level, you can create your own Liveness Detection Activity or OCR Activity with your own UI Design. 
+
+1. Create new Activity, then extends from VisionActivity.  
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+class CustomLivenessActivity : VisionActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_custom_liveness)
+    }
+}
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)
+In Java, you must change Access Modifiers of onCreate method from protected to public.
+```kotlin
+public class CustomLivenessActivity extends VisionActivity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_my);
+    }
+}
+```
+
+### LivenessCameraView
+LivenessCameraPreview is a component which is a SurfaceView which includes a Camera controller and a Liveness Detection Processor with Machine Learning. This component can display the camera preview and process liveness detection at the same time. 
+<br/><br/>
+Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.
+
+#### XML
+![xml](https://img.shields.io/badge/-xml-important)
+```xml
+<io.kredibel.vision.LivenessCameraView
+  android:id="@+id/livenessView"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_centerInParent="true"
+  android:foregroundGravity="center"/>
+```
+
+#### Initialize
+```kotlin
+livenessView = findViewById(R.id.livenessView)
+```
+
+#### Detection
+
+```kotlin
+livenessView.setDetections(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT))
+```
+
+#### LivenessDetectionListener
+
+LivenessDetectionListener is a java interface that will accommodate the results of the liveness detection process.
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+object listener : LivenessDetectionListener {
+    override fun onError(message: String?) {
+            TODO("Not yet implemented")
+    }
+
+    override fun onPrepare(isLoading: Boolean) {
+            TODO("Not yet implemented")
+    }
+
+    override fun onDetecting(isDetection: Boolean, detection: String?) {
+            TODO("Not yet implemented")
+    }
+
+    override fun onEachCompleted(livenessResult: LivenessResult?) {
+            TODO("Not yet implemented")
+    }
+
+    override fun onAllCompleted(livenessResults: MutableList<LivenessResult>?) {
+            TODO("Not yet implemented")
+	}
+}
+
+livenessView.setLivenessDetectionListener(listener)
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)   
+```kotlin
+LivenessDetectionListener listener = new LivenessDetectionListener() {
+  @Override
+  public void onError(String message) {
+     // Getting an error message if the process failed.
+  }
+
+  @Override
+  public void onPrepare(boolean isLoading) {
+     // Get process preparation status.
+  }
+
+  @Override
+  public void onDetecting(boolean isDetecting, String detection) {
+     // get detection status
+  }
+
+  @Override
+  public void onEachCompleted(LivenessResult livenessResult) {
+     // Get results on each detection.
+  }
+
+  @Override
+  public void onAllCompleted(List<LivenessResult> livenessResults) {
+     // Get all detection results.
+  }
+};
+
+livenessView.setLivenessDetectionListener(listener);
+```
+
+#### Start Preview
+To start the preview, you can call the start() method.
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+livenessView.start()
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)  
+```kotlin
+livenessView.start()
+```
+
+#### Stop Preview
+Don't forget to stop the process when it's finished or not in use.
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+livenessView.stop()
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)  
+```kotlin
+livenessView.stop()
+```
 
 
