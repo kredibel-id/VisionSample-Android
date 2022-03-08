@@ -77,10 +77,9 @@ dependencies {
 ```
 Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
 ### Access Token
-Please contact our sales team to get the token/api key.
-
-Add a meta tag named kredibel-apikey in the scope of the **`<application></application>`** on your AndroidManifest.xml.   
-Example:
+1. Please contact our sales team to get the token/api key.
+2. Add a meta tag named kredibel-apikey in the scope of the **`<application></application>`** on your AndroidManifest.xml.   
+Example :     
 ```xml
 <meta-data
     android:name="kredibel-apikey"
@@ -200,8 +199,7 @@ Vision.with(this)
 ```
 
 ### Customizing instruction
-You can customize instructions and some text by adding the following string resource to your project. Add only the strings you need and make sure the string name is correct, don't be mistaken.
-
+You can customize instructions and some text by adding the following string resource to your project. Add only the strings you need and make sure the string name is correct, don't be mistaken.   
 ```xml
 <!--Vision General-->
 <string name="kv_title_close" translatable="false">Close</string>
@@ -259,6 +257,7 @@ In the basic implementation, you have understood the use of the start() method i
 At an advanced level, you can create your own Liveness Detection Activity or OCR Activity with your own UI Design. 
 
 1. Create new Activity, then extends from VisionActivity.  
+
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 class CustomLivenessActivity : VisionActivity() {
@@ -269,7 +268,7 @@ class CustomLivenessActivity : VisionActivity() {
 }
 ```
 
-![java](https://img.shields.io/badge/-Java-%23B07119)
+![java](https://img.shields.io/badge/-Java-%23B07119)   
 In Java, you must change Access Modifiers of onCreate method from protected to public.
 ```kotlin
 public class CustomLivenessActivity extends VisionActivity {
@@ -287,7 +286,6 @@ LivenessCameraPreview is a component which is a SurfaceView which includes a Cam
 <br/><br/>
 Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.
 
-#### XML
 ![xml](https://img.shields.io/badge/-xml-important)
 ```xml
 <io.kredibel.vision.LivenessCameraView
@@ -299,14 +297,24 @@ Add this component to your activity or fragment layout page. Well, here you can 
 ```
 
 #### Initialize
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)   
 ```kotlin
 livenessView = findViewById(R.id.livenessView)
 ```
 
-#### Detection
+![java](https://img.shields.io/badge/-Java-%23B07119)  
+```kotlin
+livenessView = findViewById(R.id.livenessView);
+```
 
+#### Detection
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)  
 ```kotlin
 livenessView.setDetections(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT))
+```
+![java](https://img.shields.io/badge/-Java-%23B07119)  
+```kotlin
+livenessView.setDetections(new String[]{Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT});
 ```
 
 #### LivenessDetectionListener
