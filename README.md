@@ -280,7 +280,7 @@ public class CustomLivenessActivity extends VisionActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_my);
+         setContentView(R.layout.activity_custom_ocr);
     }
 }
 ```
