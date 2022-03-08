@@ -256,6 +256,8 @@ You can customize instructions and some text by adding the following string reso
 
 In the basic implementation, you have understood the use of the start() method in the Vision class. Really, it's the quick and easy way. 
 
+<img width="100%" src="https://1.bp.blogspot.com/-9MiK78CFMLM/YQFurOq9AII/AAAAAAAAQ1A/lKj5GiDnO_MkPLb72XqgnvD5uxOsHO-eACLcBGAsYHQ/s0/Android-Compose-1.0-header-v2.png"/>
+
 At an advanced level, you can create your own Liveness Detection Activity or OCR Activity with your own UI Design. 
 
 ### Create new Activity, then extends from VisionActivity.  
@@ -284,7 +286,6 @@ public class CustomLivenessActivity extends VisionActivity {
 ```
 
 ### LivenessCameraView
-<img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/preview.png?raw=true"/>
 LivenessCameraPreview is a component which is a SurfaceView which includes a Camera controller and a Liveness Detection Processor with Machine Learning. This component can display the camera preview and process liveness detection at the same time. 
 <br/><br/>
 Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.   
