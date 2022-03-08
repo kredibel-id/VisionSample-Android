@@ -43,27 +43,27 @@ Currently the Vision SDK can only be used on the Android platform.
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-green) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-green)
 ## Install/ Setup
 ### Gradle
-#### 1. Add kredibel repository.
+#### 1. Add kredibel repository.   
+```groovy
+maven{url 'https://repo.repsy.io/mvn/kredibel/vision'}
+```
 You can do this in two alternative ways.
-- Latest way : Add repository in dependencyResolutionManagement in setting.gradle.
+- Latest way(Gradle 7+) : Add repository in dependencyResolutionManagement in setting.gradle.
 ```groovy
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
-        mavenCentral()
+        ...
+        ...
         maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this
     }
 }
-rootProject.name = "YourProjectName"
-include ':app'
 ```
-- Old way : Add repository in build.gradle file at Project level. Don't forget to remove dependencyResolutionManagement, if you use this way.
+- Old way : Add repository in build.gradle file at Project level.
 ```groovy
 allprojects {
     repositories {
-       google()
-       mavenCentral()
+       ...
+       ...
        maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this 
     }
 }
