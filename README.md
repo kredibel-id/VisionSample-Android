@@ -256,7 +256,7 @@ In the basic implementation, you have understood the use of the start() method i
 
 At an advanced level, you can create your own Liveness Detection Activity or OCR Activity with your own UI Design. 
 
-1. Create new Activity, then extends from VisionActivity.  
+### Create new Activity, then extends from VisionActivity.  
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
