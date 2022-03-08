@@ -1,5 +1,5 @@
 # Vision Sample (Android)   
-![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-green) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%23C800DA) ![material](https://img.shields.io/badge/Material-1.5.0-brightgreen) ![appcompat](https://img.shields.io/badge/AppCompat-1.4.1-%23EE76D0) ![vision](https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220304142741-%230169FF)   <hr/>
+![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Min%20SDK-API%2019-brightgreen?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%23C800DA?logo=kotlin) ![vision](https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220304142741-%230169FF?logo=face)   <hr/>
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.   <br/><br/>
 You can checkout the source code of this project.
 ```text
@@ -40,7 +40,7 @@ Identity OCR is an Optical Character Recognition (OCR) service that supports thr
 
 Currently the Vision SDK can only be used on the Android platform.  
 #### Support API Level
-![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-green) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-green)
+![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-green?logo=android) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-green?logo=android)
 ## Install/ Setup
 ### Gradle
 #### 1. Add kredibel repository.   
