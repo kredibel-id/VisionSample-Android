@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomLivenessActivity">
+
+    <io.kredibel.vision.LivenessCameraView
+        android:id="@+id/livenessView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentTop="true"
+        android:foregroundGravity="center" />
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_below="@+id/livenessView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginVertical="22dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"/>
+</RelativeLayout>

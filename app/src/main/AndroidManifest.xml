@@ -10,6 +10,9 @@
       android:supportsRtl="true"
       android:theme="@style/Theme.VisionSample">
     <activity
+        android:name=".CustomLivenessActivity"
+        android:exported="true"/>
+    <activity
         android:name=".MainActivity"
         android:exported="true">
       <intent-filter>
@@ -22,7 +25,6 @@
     <meta-data
         android:name="kredibel-apikey"
         android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCwicGVybWlzc2lvbl9pZCI6MSwiY29tcGFueV9pZCI6OSwidHlwZV9pZCI6MiwidW5pcXVlIjoiQTlSQ1oyIn0.DDWvuNT8jaBpgFGjejtkmoQv5O2rFWYL89GOCN7nulw"/>
-
   </application>
 
 </manifest>
