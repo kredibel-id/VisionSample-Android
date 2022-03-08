@@ -16,36 +16,54 @@ Then open this sample project with Android Studio or Intellij IDEA.<hr/>
     <img src="https://img.shields.io/badge/Version-0.0.1--beta--20220304142741-%230169FF"/>
 </p>
 
-### Introduction
+## Introduction
 Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
 
+##### Liveness Detection
+
+1. Examine the digital representation of the user's face from the camera preview in realtime.
+2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
+3. Determine whether it is a living person or not.
+<p align="center"> 
+<img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/>
+</p>
+
+##### Identity OCR
+Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
+1. National Identity (KTP)
+2. Driving License (SIM)
+3. Passport 
+
+<p align="center">
+    <img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
+</p>
+
 Currently the Vision SDK can only be used on the Android platform.  
-
-### Support API Level
+#### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-green) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-green)
-
+## Install/ Setup
 ### Gradle
-#### 1. Add kredibel repository.
+#### 1. Add kredibel repository.   
+```groovy
+maven{url 'https://repo.repsy.io/mvn/kredibel/vision'}
+```
 You can do this in two alternative ways.
-- Latest way : Add repository in dependencyResolutionManagement in setting.gradle.
+- Latest way(Gradle 7+) : Add repository in dependencyResolutionManagement in setting.gradle.
 ```groovy
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
-        mavenCentral()
+        ...
+        ...
         maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this
     }
 }
-rootProject.name = "YourProjectName"
-include ':app'
 ```
-- Old way : Add repository in build.gradle file at Project level. Don't forget to remove dependencyResolutionManagement, if you use this way.
+- Old way : Add repository in build.gradle file at Project level.
 ```groovy
 allprojects {
     repositories {
-       google()
-       mavenCentral()
+       ...
+       ...
        maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this 
     }
 }
@@ -59,23 +77,17 @@ dependencies {
 ```
 Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
 ### Access Token
-Please contact our sales team to get the token/api key.
-
-Add a meta tag named kredibel-apikey in the scope of the **`<application></application>`** on your AndroidManifest.xml.   
-Example:
+1. Please contact our sales team to get the token/api key.
+2. Add a meta tag named kredibel-apikey in the scope of the **`<application></application>`** on your AndroidManifest.xml.   
+Example :     
 ```xml
 <meta-data
     android:name="kredibel-apikey"
     android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCw bla.. Bla.. bla.."/> 
 ```
-
-### Liveness Detection
-
-1. Examine the digital representation of the user's face from the camera preview in realtime.
-2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
-3. Determine whether it is a living person or not.
-
-#### 1. Single Detection (Basic Implementation)   
+## How to Use (Basic Implementation)
+### Liveness Detection   
+#### 1. Single Detection   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this) // Context, required
@@ -104,12 +116,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start();
 ```
-### Identity OCR
-Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
-1. National Identity (KTP)
-2. Driving License (SIM)
-3. Passport   
-
+### Identity OCR   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
@@ -190,11 +197,9 @@ Vision.with(this)
     .showBoundingBox(true) // optional
     .start();
 ```
-<img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/on-detecting.png?raw=true"/> <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ktp-ocr.png?raw=true"/>
 
 ### Customizing instruction
-You can customize instructions and some text by adding the following string resource to your project. Add only the strings you need and make sure the string name is correct, don't be mistaken.
-
+You can customize instructions and some text by adding the following string resource to your project. Add only the strings you need and make sure the string name is correct, don't be mistaken.   
 ```xml
 <!--Vision General-->
 <string name="kv_title_close" translatable="false">Close</string>
@@ -244,6 +249,161 @@ You can customize instructions and some text by adding the following string reso
 <string name="kv_msg_ocr_verification_failed" translatable="false">Verification Failed</string>
 <string name="kv_clue_card_inframe" translatable="false">Position your identity card in the frame and in a well-lit place.
 </string>
+```
+## Advance Implementation : Create Own Vision Activity.
+
+In the basic implementation, you have understood the use of the start() method in the Vision class. Really, it's the quick and easy way. 
+
+At an advanced level, you can create your own Liveness Detection Activity or OCR Activity with your own UI Design. 
+
+### Create new Activity, then extends from VisionActivity.  
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+class CustomLivenessActivity : VisionActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_custom_liveness)
+    }
+}
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)   
+In Java, you must change Access Modifiers of onCreate method from protected to public.
+```kotlin
+public class CustomLivenessActivity extends VisionActivity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_my);
+    }
+}
+```
+
+### LivenessCameraView
+LivenessCameraPreview is a component which is a SurfaceView which includes a Camera controller and a Liveness Detection Processor with Machine Learning. This component can display the camera preview and process liveness detection at the same time. 
+<br/><br/>
+Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.
+
+![xml](https://img.shields.io/badge/-xml-important)
+```xml
+<io.kredibel.vision.LivenessCameraView
+  android:id="@+id/livenessView"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_centerInParent="true"
+  android:foregroundGravity="center"/>
+```
+
+#### Initialize
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)   
+```kotlin
+livenessView = findViewById(R.id.livenessView)
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)  
+```kotlin
+livenessView = findViewById(R.id.livenessView);
+```
+
+#### Detection
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)  
+```kotlin
+livenessView.setDetections(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT))
+```
+![java](https://img.shields.io/badge/-Java-%23B07119)  
+```kotlin
+livenessView.setDetections(new String[]{Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT});
+```
+
+#### LivenessDetectionListener
+
+LivenessDetectionListener is a java interface that will accommodate the results of the liveness detection process.
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+val listener = object : LivenessDetectionListener {
+    override fun onError(message: String?) {
+    	// Getting an error message if the process failed.
+    }
+
+    override fun onPrepare(isLoading: Boolean) {
+    	// Get process preparation status.
+    }
+
+    override fun onDetecting(isDetection: Boolean, detection: String?) {
+    	// get detection status
+    }
+
+    override fun onEachCompleted(livenessResult: LivenessResult?) {
+    	// Get results on each detection.
+    }
+
+    override fun onAllCompleted(livenessResults: MutableList<LivenessResult>?) {
+    	// Get all detection results.
+    }
+}
+
+livenessView.setLivenessDetectionListener(listener)
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)   
+```kotlin
+LivenessDetectionListener listener = new LivenessDetectionListener() {
+  @Override
+  public void onError(String message) {
+     // Getting an error message if the process failed.
+  }
+
+  @Override
+  public void onPrepare(boolean isLoading) {
+     // Get process preparation status.
+  }
+
+  @Override
+  public void onDetecting(boolean isDetecting, String detection) {
+     // get detection status
+  }
+
+  @Override
+  public void onEachCompleted(LivenessResult livenessResult) {
+     // Get results on each detection.
+  }
+
+  @Override
+  public void onAllCompleted(List<LivenessResult> livenessResults) {
+     // Get all detection results.
+  }
+};
+
+livenessView.setLivenessDetectionListener(listener);
+```
+
+#### Start Preview
+To start the preview, you can call the start() method.
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+livenessView.start()
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)  
+```kotlin
+livenessView.start()
+```
+
+#### Stop Preview
+Don't forget to stop the process when it's finished or not in use.
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+livenessView.stop()
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)  
+```kotlin
+livenessView.stop()
 ```
 
 
