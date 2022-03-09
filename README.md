@@ -140,7 +140,9 @@ Vision.with(this)
     .start();
 ```
 ## Using VisionListener   
-You can use Vision Listener for capture all detection results and or add a custom action.  
+You can use **_VisionListener_** for capture all detection results and or add a custom action after process. 
+
+If you use a **_VisionListener_**, then you don't need to call the **_SuccessPage()_** method, because it won't run.
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
@@ -283,8 +285,8 @@ public class CustomLivenessActivity extends VisionActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-       super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_custom_ocr);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_custom_ocr);
     }
 }
 ```
@@ -404,7 +406,7 @@ livenessView.start();
 ```
 
 #### Stop Preview
-Don't forget to stop the process when it's finished or not in use.
+Don't forget to stop the process when it's finished or not in use. You can call it on onDestroy() on the Activity or on finish().
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
@@ -415,6 +417,7 @@ livenessView.stop()
 ```kotlin
 livenessView.stop();
 ```
+<h1></h1>
 <h1 align="center">Using OCRCameraView Component</h1>
 <img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr-camera-view.png?raw=true" />   
     
@@ -512,7 +515,7 @@ ocrPreview.takeIdentity(Identity.KTP, listener)
 ocrPreview.takeIdentity(Identity.KTP, listener)
 ```
 #### Stop Preview
-Don't forget to stop the process when it's finished or not in use.
+Don't forget to stop the process when it's finished or not in use. You can call it on onDestroy() on the Activity or on finish().
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
