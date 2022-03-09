@@ -286,7 +286,7 @@ public class CustomLivenessActivity extends VisionActivity {
 ```
 
 ### LivenessCameraView
-<img width="20%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/face-viewfinder-thin.png?raw=true" />
+<img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness-camera-view.png?raw=true" />   
 LivenessCameraPreview is a component which is a SurfaceView which includes a Camera controller and a Liveness Detection Processor with Machine Learning. This component can display the camera preview and process liveness detection at the same time. 
 <br/><br/>
 Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.   
@@ -411,7 +411,7 @@ livenessView.stop()
 livenessView.stop();
 ```
 ### OCRCameraView
-<img width="20%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/id-card-thin.png?raw=true" />
+<img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr-camera-view.png?raw=true" />   
     
 OCRCameraView is a component which is a SurfaceView which includes a Camera controller and a OCR with Kredibel API.
 
