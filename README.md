@@ -11,9 +11,13 @@ Then open this sample project with Android Studio or Intellij IDEA.
 <br/><br/><br/><br/>
 
 <p align="center">  
-    <img align="center" width="200" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
+    
 </p>
-<h1 align="center">Vision SDK</h1>
+<h1 align="center">
+    <img align="center" width="100" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
+    <br/>
+    Vision SDK
+</h1>
 <p align="center">  
     <img src="https://img.shields.io/badge/Version-0.0.1--beta--20220304142741-%230169FF"/>
 </p>
