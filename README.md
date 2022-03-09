@@ -24,8 +24,8 @@ Then open this sample project with Android Studio or Intellij IDEA.
 
 ## Introduction
 Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
-
-##### Liveness Detection
+### Features
+##### 1. Liveness Detection
 
 1. Examine the digital representation of the user's face from the camera preview in realtime.
 2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
@@ -34,7 +34,7 @@ Vision SDK is a library that provides computer vision services such as Liveness 
 <img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/>
 </p>
 
-##### Identity OCR
+##### 2. Identity OCR
 Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
 1. National Identity (KTP)
 2. Driving License (SIM)
@@ -47,8 +47,8 @@ Identity OCR is an Optical Character Recognition (OCR) service that supports thr
 Currently the Vision SDK can only be used on the Android platform.  
 ##### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-%233DDC84?logo=android) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-%233DDC84?logo=android)
-## Install/ Setup
-### Gradle
+# Install / Setup
+## Gradle
 #### 1. Add kredibel repository.   
 ```groovy
 maven{url 'https://repo.repsy.io/mvn/kredibel/vision'}
@@ -82,7 +82,7 @@ dependencies {
 }
 ```
 Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
-### Access Token
+## Access Token
 1. Please contact our sales team to get the token/api key.
 2. Add a meta tag named kredibel-apikey in the scope of the **`<application></application>`** on your AndroidManifest.xml.   
 Example :     
@@ -91,8 +91,8 @@ Example :
     android:name="kredibel-apikey"
     android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCw bla.. Bla.. bla.."/> 
 ```
-## How to Use (Basic Implementation)
-### Liveness Detection   
+# How to Use (Basic Implementation)
+## Liveness Detection   
 #### 1. Single Detection   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
@@ -122,7 +122,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start();
 ```
-### Identity OCR   
+## Identity OCR   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
@@ -139,7 +139,7 @@ Vision.with(this)
     .onSuccessPage(MainActivity.class)  // optional
     .start();
 ```
-### Using VisionListener   
+## Using VisionListener   
 You can use Vision Listener for capture all detection results and or add a custom action.  
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
@@ -176,7 +176,7 @@ Vision.with(this)
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start();
 ```
-### Optional Features   
+## Optional Features   
 Some optional features that you can use.   
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
@@ -204,7 +204,7 @@ Vision.with(this)
     .start();
 ```
 
-### Customizing instruction
+## Customizing String
 You can customize instructions and some text by adding the following string resource to your project. Add only the strings you need and make sure the string name is correct, don't be mistaken.   
 ```xml
 <!--Vision General-->
@@ -264,7 +264,7 @@ In the basic implementation, you have understood the use of the start() method i
 
 At an advanced level, you can create your own Liveness Detection Activity or OCR Activity with your own UI Design. 
 
-### Create new Activity, then extends from VisionActivity.  
+## Create new Activity, then extends from VisionActivity.  
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
@@ -289,9 +289,10 @@ public class CustomLivenessActivity extends VisionActivity {
 }
 ```
 
-<h1 align="center">LivenessCameraView</h1>
-<img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness-camera-view.png?raw=true" />   
-LivenessCameraPreview is a component which is a SurfaceView which includes a Camera controller and a Liveness Detection Processor with Machine Learning. This component can display the camera preview and process liveness detection at the same time. 
+<h1 align="center">Using LivenessCameraView Component</h1>
+<img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness-camera-view.png?raw=true" />
+
+**LivenessCameraPreview** is a component which is a SurfaceView which includes a Camera controller and a Liveness Detection Processor with Machine Learning. This component can display the camera preview and process liveness detection at the same time. 
 <br/><br/>
 Add this component to your activity or fragment layout page. Well, here you can design your own UI/UX.   
 <br/>
@@ -414,10 +415,10 @@ livenessView.stop()
 ```kotlin
 livenessView.stop();
 ```
-<h1 align="center">OCRCameraView</h1>
+<h1 align="center">Using OCRCameraView Component</h1>
 <img width="100%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr-camera-view.png?raw=true" />   
     
-OCRCameraView is a component which is a SurfaceView which includes a Camera controller and a OCR with Kredibel API.
+**OCRCameraView** is a component which is a SurfaceView which includes a Camera controller and a OCR with Kredibel API.
 
 ```xml
 <io.kredibel.vision.OCRCameraView
@@ -509,6 +510,18 @@ ocrPreview.takeIdentity(Identity.KTP, listener)
 ![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
 ocrPreview.takeIdentity(Identity.KTP, listener)
+```
+#### Stop Preview
+Don't forget to stop the process when it's finished or not in use.
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+ocrPreview.stop()
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)
+```kotlin
+ocrPreview.stop();
 ```
 
 
