@@ -252,7 +252,7 @@ You can customize instructions and some text by adding the following string reso
 <string name="kv_clue_card_inframe" translatable="false">Position your identity card in the frame and in a well-lit place.
 </string>
 ```
-## Advance Implementation : Create Own Vision Activity.
+# Advance Implementation : Create Own Vision Activity.
 
 In the basic implementation, you have understood the use of the start() method in the Vision class. Really, it's the quick and easy way. 
 
