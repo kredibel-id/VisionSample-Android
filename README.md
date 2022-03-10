@@ -30,19 +30,11 @@ Vision SDK is a library that provides computer vision services such as Liveness 
 1. Examine the digital representation of the user's face from the camera preview in realtime.
 2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
 3. Determine whether it is a living person or not.
-<p align="center"> 
-<img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/>
-</p>
-
 ##### 2. Identity OCR
 Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
 1. National Identity (KTP)
 2. Driving License (SIM)
-3. Passport 
-
-<p align="center">
-    <img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
-</p>
+3. Passport    
 
 Currently the Vision SDK can only be used on the Android platform.  
 ##### Support API Level
