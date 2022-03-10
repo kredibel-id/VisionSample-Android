@@ -25,19 +25,19 @@ Then open this sample project with Android Studio or Intellij IDEA.
 ## Introduction
 Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
 ### Features
-##### 1. Liveness Detection
+##### Liveness Detection
 
 1. Examine the digital representation of the user's face from the camera preview in realtime.
 2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
 3. Determine whether it is a living person or not.
-##### 2. Identity OCR
+##### Identity OCR
 Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
 1. National Identity (KTP)
 2. Driving License (SIM)
 3. Passport    
 
 Currently the Vision SDK can only be used on the Android platform.  
-##### Support API Level
+### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-%233DDC84?logo=android) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-%233DDC84?logo=android)
 # Install / Setup
 ## Gradle
