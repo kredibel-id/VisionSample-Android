@@ -14,7 +14,7 @@ Then open this sample project with Android Studio or Intellij IDEA.
     
 </p>
 <h1 align="center">
-    <img align="center" width="260" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
+    <a href="https://www.kredibel.co.id/"><img align="center" width="260" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/></a>
     <br/><br/>
     Vision SDK
 </h1>
