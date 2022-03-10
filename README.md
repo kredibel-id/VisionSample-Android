@@ -469,7 +469,7 @@ livenessView.stop();
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
-val ocrPreview : OCRCameraPreview = findViewById(R.id.ocrPreview);
+val ocrPreview : OCRCameraPreview = findViewById(R.id.ocrPreview)
 ```
 
 ![java](https://img.shields.io/badge/-Java-%23B07119)
