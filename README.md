@@ -83,8 +83,13 @@ dependencies {
 ```
 Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
 ## Access Token
+<p>
 1. Please contact our sales team to get the token/api key.
-2. Open your your AndroidManifest.xml than add a this tag in the scope of the **`<application></application>`** .   
+</p>
+<p>
+2. Open your your AndroidManifest.xml than add a this tag in the scope of the application tag.   
+</p>   
+ 
 ```xml
 <meta-data
     android:name="kredibel-apikey"
@@ -93,8 +98,9 @@ Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kred
 Example :     
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="id.web.hangga.visionsample">
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.web.hangga.visionsample">
 
     <application
         android:allowBackup="true"
