@@ -125,7 +125,9 @@ Example :
 </manifest>
 ```
 
-# How to Use (Basic Implementation)
+# How to Use (Basic Implementation)   
+The Vision class is the main class in the Kredibel Vision SDK. This class contains methods or functions to handle Liveness Detection and OCR quickly. You don't need to create a layout/UI, because we have provided everything. You just use all the functions/methods in the Vision class.   
+<img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/> <img width="300" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
 ## Liveness Detection   
 #### 1. Single Detection   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
