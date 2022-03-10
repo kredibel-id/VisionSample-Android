@@ -84,13 +84,41 @@ dependencies {
 Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
 ## Access Token
 1. Please contact our sales team to get the token/api key.
-2. Add a meta tag named kredibel-apikey in the scope of the **`<application></application>`** on your AndroidManifest.xml.   
-Example :     
+2. Open your your AndroidManifest.xml than add a this tag in the scope of the **`<application></application>`** .   
 ```xml
 <meta-data
     android:name="kredibel-apikey"
-    android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCw bla.. Bla.. bla.."/> 
+    android:value="<Your API Key>"/> 
 ```
+Example :     
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="id.web.hangga.visionsample">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VisionSample">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="kredibel-apikey"
+            android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCw bla.. Bla.. bla.."/>
+    </application>
+</manifest>
+```
+
 # How to Use (Basic Implementation)
 ## Liveness Detection   
 #### 1. Single Detection   
