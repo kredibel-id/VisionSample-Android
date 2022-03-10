@@ -1,5 +1,5 @@
 # Vision Sample (Android)   
-![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) ![vision](https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220304142741-%230169FF?logo=face)   
+![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) ![vision](https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220310134848-%230169FF?logo=face)   
 
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.   <br/><br/>
 You can checkout the source code of this project.
@@ -19,7 +19,7 @@ Then open this sample project with Android Studio or Intellij IDEA.
     Vision SDK
 </h1>
 <p align="center">  
-    <img src="https://img.shields.io/badge/Version-0.0.1--beta--20220304142741-%230169FF"/>
+    <img src="https://img.shields.io/badge/Version-0.0.1--beta--20220310134848-%230169FF"/>
 </p>
 
 ## Introduction
