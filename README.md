@@ -540,7 +540,7 @@ ocrPreview.takeIdentity(Identity.KTP, listener)
 ```
 ![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
-ocrPreview.takeIdentity(Identity.KTP, listener)
+ocrPreview.takeIdentity(Identity.KTP, listener);
 ```
 #### Stop Preview
 Don't forget to stop the process when it's finished or not in use. You can call it on onDestroy() on the Activity or on finish().
