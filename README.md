@@ -1,5 +1,5 @@
 # Vision Sample (Android)   
-![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) <a href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/"><img src="https://img.shields.io/badge/Version-0.0.1--beta--20220310134848-%230169FF"/></a>   
+![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) <a href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/"><img src="https://img.shields.io/badge/Version-0.0.1--beta--20220311100250-%230169FF"/></a>   
 
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.   <br/><br/>
 You can checkout the source code of this project.
@@ -19,7 +19,7 @@ Then open this sample project with Android Studio or Intellij IDEA.
     Vision SDK
 </h1>
 <p align="center">  
-    <a href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/"><img src="https://img.shields.io/badge/Version-0.0.1--beta--20220310134848-%230169FF"/></a>
+    <a href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/"><img src="https://img.shields.io/badge/Version-0.0.1--beta--20220311100250-%230169FF"/></a>
 </p>
 
 ## Introduction
@@ -170,6 +170,33 @@ Vision.with(this)
     .onSuccessPage(MainActivity.class)  // optional
     .start();
 ```
+
+## Get Result Data
+
+If you use **_onSuccessPage()_** method, then you can get result data from intent on activity created.  
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_success_page)
+    // get result data
+    val livenessResults : List<LivenessResult> = intent.getParcelableArrayListExtra(Vision.RESULT_LIVENESS)!!
+    val ocrResult : OcrResult = intent.getParcelableExtra(Vision.RESULT_OCR)!!
+}
+```
+![java](https://img.shields.io/badge/-Java-%23B07119)
+```kotlin
+@Override
+public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_success_page);
+    // get result data
+    List<LivenessResult> livenessResults = intent.getParcelableArrayListExtra(Vision.RESULT_LIVENESS);
+    OcrResult ocrResult = intent.getParcelableExtra(Vision.RESULT_OCR);
+}
+```
+
 ## Using VisionListener   
 You can use **_VisionListener_** for capture all detection results and or add a custom action after process. 
 
