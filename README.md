@@ -192,8 +192,8 @@ public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_success_page);
     // get result data
-    List<LivenessResult> livenessResults = intent.getParcelableArrayListExtra(Vision.RESULT_LIVENESS);
-    OcrResult ocrResult = intent.getParcelableExtra(Vision.RESULT_OCR);
+    List<LivenessResult> livenessResults = getIntent().getParcelableArrayListExtra(Vision.RESULT_LIVENESS);
+    OcrResult ocrResult = getIntent().getParcelableExtra(Vision.RESULT_OCR);
 }
 ```
 
