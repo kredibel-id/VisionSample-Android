@@ -159,7 +159,7 @@ Vision.with(this)
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
     .showOCRLastResult(true) // optional
-    .onSuccessPage(MyActivity::class.java)  // optional
+    .onSuccessPage(SuccessPageActivity::class.java)  // optional
     .start()
 ```
 ![java](https://img.shields.io/badge/-Java-%23B07119)
@@ -167,40 +167,68 @@ Vision.with(this)
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
     .showOCRLastResult(true) // optional
-    .onSuccessPage(MyActivity.class)  // optional
+    .onSuccessPage(SuccessPageActivity.class)  // optional
     .start();
 ```
 
 ## Get Result Data
-
-If you use **_onSuccessPage()_** method, then you can get result data from intent on activity created.  
+You can use the **_onSuccessPage()_** method to select your activity that will receive the result data.
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_success_page)
-    // get result data
-    val livenessResults : List<LivenessResult> = intent.getParcelableArrayListExtra(Vision.RESULT_LIVENESS)!!
-    val ocrResult : OcrResult = intent.getParcelableExtra(Vision.RESULT_OCR)!!
-}
+Vision.with(this) // Context, required
+    .detection(Detection.SMILE) // required
+    .onSuccessPage(SuccessPageActivity.class) // optional for passing result data
+    .start()
 ```
 ![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
-@Override
-public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_success_page);
-    // get result data
-    List<LivenessResult> livenessResults = getIntent().getParcelableArrayListExtra(Vision.RESULT_LIVENESS);
-    OcrResult ocrResult = getIntent().getParcelableExtra(Vision.RESULT_OCR);
+Vision.with(this)
+    .detection(Detection.SMILE) // required
+    .onSuccessPage(SuccessPageActivity.class) // optional for passing result data
+    .start();
+```
+
+Then you can get result data from intent in your **_SuccessPageActivity_** on activity created override method with this parameters.
+
+```kotlin
+getParcelableArrayListExtra(Vision.RESULT_LIVENESS)
+
+getParcelableExtra(Vision.RESULT_OCR)
+```  
+Example :
+
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+class SuccessPageActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_success_page)
+        // get result data
+        val livenessResults : List<LivenessResult> = intent.getParcelableArrayListExtra(Vision.RESULT_LIVENESS)!!
+        val ocrResult : OcrResult = intent.getParcelableExtra(Vision.RESULT_OCR)!!
+    }
+}
+```
+
+![java](https://img.shields.io/badge/-Java-%23B07119)
+```kotlin
+public class SuccessPageActivity extends AppCompatActivity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_third);
+        // get result data
+        List<LivenessResult> livenessResults = getIntent().getParcelableArrayListExtra(Vision.RESULT_LIVENESS);
+        OcrResult ocrResult = intent.getParcelableExtra(Vision.RESULT_OCR);
+    }
 }
 ```
 
 ## Using VisionListener   
 You can use **_VisionListener_** for capture all detection results and or add a custom action after process. 
 
-If you use a **_VisionListener_**, then you don't need to call the **_SuccessPage()_** method, because it won't run.
+If you use a **_VisionListener_**, then you don't need to call the **_onSuccessPage()_** method, because it won't run.
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
