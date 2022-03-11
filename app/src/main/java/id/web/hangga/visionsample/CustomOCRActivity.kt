@@ -56,24 +56,6 @@ class CustomOCRActivity : VisionActivity() {
         }
     }
 
-    val listener = object : OCRCameraListener{
-        override fun onGetBitmap(bitmap: Bitmap?) {
-
-        }
-
-        override fun onError(message: String?) {
-
-        }
-
-        override fun onProgress(isLoading: Boolean) {
-
-        }
-
-        override fun onComplete(isVerified: Boolean, ocrResult: OcrResult?) {
-
-        }
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         ocrPreview.stop()

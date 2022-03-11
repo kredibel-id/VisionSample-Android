@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnLiveness).setOnClickListener {
             Vision.with(this)
                 .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN))
-                .listener(object : VisionListener{
+                .listener(object : VisionListener{ // optional, if you need add custom action.
                     override fun onSuccess(livenessResult: MutableList<LivenessResult>?, ocrResult: OcrResult?) {
 
                     }
@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
                         showMessage(s!!)
                     }
                 })
-                .onSuccessPage(MainActivity::class.java)  // optional
                 .showContour(true)     // optional
                 .showLabel(true)       // optional
                 .showBoundingBox(true) // optional
@@ -43,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             Vision.with(this)
                 .identity(Identity.KTP)
                 .showOCRLastResult(true)
+                .onSuccessPage(SuccessPageActivity::class.java)  // optional, you can get result data from intent
                 .start()
         }
 

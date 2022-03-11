@@ -25,7 +25,7 @@ class CustomLivenessActivity : VisionActivity() {
         livenessView.start()
     }
 
-    val listener  = object : LivenessDetectionListener {
+    val listener = object : LivenessDetectionListener {
         override fun onError(message: String?) {
             showMessage(message)
         }

@@ -41,5 +41,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    implementation 'io.kredibel:vision:0.0.1-beta-20220310134848'
+    implementation 'io.kredibel:vision:0.0.1-beta-20220311100250'
 }

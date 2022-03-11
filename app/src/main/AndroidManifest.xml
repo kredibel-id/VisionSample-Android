@@ -10,6 +10,9 @@
       android:supportsRtl="true"
       android:theme="@style/Theme.VisionSample">
     <activity
+        android:name=".SuccessPageActivity"
+        android:exported="true"/>
+    <activity
         android:name=".CustomOCRActivity"
         android:exported="true"/>
     <activity
