@@ -78,7 +78,7 @@ Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kred
 Please read the instructions <a href="https://docs.kredibel.io/authentication-1">here</a> to get the API-Key or contact our sales team.
 
 ## Config AndroidManifest.xml
-After getting API-Key then open your **AndroidManifest.xml** than add a this tag in the scope of the application tag. Please name the attribute name with **kredible-apikey**.   
+After getting API-Key then open your **AndroidManifest.xml** than add a this tag in the scope of the application tag. Please name the attribute name with **kredibel-apikey**.   
  
 ```xml
 <meta-data android:name="kredibel-apikey" android:value="<Your API-Key>" /> 
