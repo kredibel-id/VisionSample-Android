@@ -159,7 +159,7 @@ Vision.with(this)
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
     .showOCRLastResult(true) // optional
-    .onSuccessPage(MainActivity::class.java)  // optional
+    .onSuccessPage(MyActivity::class.java)  // optional
     .start()
 ```
 ![java](https://img.shields.io/badge/-Java-%23B07119)
@@ -167,7 +167,7 @@ Vision.with(this)
 Vision.with(this)
     .identity(Identity.KTP)  // required. Identity type.
     .showOCRLastResult(true) // optional
-    .onSuccessPage(MainActivity.class)  // optional
+    .onSuccessPage(MyActivity.class)  // optional
     .start();
 ```
 
