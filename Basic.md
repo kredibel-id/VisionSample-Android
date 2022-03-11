@@ -226,4 +226,5 @@ You can customize instructions and some text by adding the following string reso
 </string>
 ```
 
+<a href="https://github.com/kredibel-id/VisionSample-Android/blob/main/Advance.md"><h1>Next : Advance Implementation >></h1></a>
 
