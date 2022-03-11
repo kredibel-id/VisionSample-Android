@@ -1,5 +1,5 @@
 # Vision Sample (Android)   
-![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) ![vision](https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220310134848-%230169FF?logo=face)   
+![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) <a href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/"><img src="https://img.shields.io/badge/Version-0.0.1--beta--20220310134848-%230169FF"/></a>   
 
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.   <br/><br/>
 You can checkout the source code of this project.
@@ -14,38 +14,30 @@ Then open this sample project with Android Studio or Intellij IDEA.
     
 </p>
 <h1 align="center">
-    <img align="center" width="260" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/>
+    <a href="https://www.kredibel.co.id/"><img align="center" width="260" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/logo_kredibel_new.png?raw=true"/></a>
     <br/><br/>
     Vision SDK
 </h1>
 <p align="center">  
-    <img src="https://img.shields.io/badge/Version-0.0.1--beta--20220310134848-%230169FF"/>
+    <a href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/"><img src="https://img.shields.io/badge/Version-0.0.1--beta--20220310134848-%230169FF"/></a>
 </p>
 
 ## Introduction
 Vision SDK is a library that provides computer vision services such as Liveness Detection and Identity OCR with Kredibel VisionAI technology. 
 ### Features
-##### 1. Liveness Detection
+##### Liveness Detection
 
 1. Examine the digital representation of the user's face from the camera preview in realtime.
 2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
 3. Determine whether it is a living person or not.
-<p align="center"> 
-<img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/>
-</p>
-
-##### 2. Identity OCR
+##### Identity OCR
 Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
 1. National Identity (KTP)
 2. Driving License (SIM)
-3. Passport 
-
-<p align="center">
-    <img width="600" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
-</p>
+3. Passport    
 
 Currently the Vision SDK can only be used on the Android platform.  
-##### Support API Level
+### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-%233DDC84?logo=android) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-%233DDC84?logo=android)
 # Install / Setup
 ## Gradle
@@ -125,7 +117,12 @@ Example :
 </manifest>
 ```
 
-# How to Use (Basic Implementation)
+# How to Use (Basic Implementation)   
+The Vision class is the main class in the Kredibel Vision SDK. This class contains methods or functions to handle Liveness Detection and OCR quickly. You don't need to create a layout/UI, because we have provided everything. You just use all the functions/methods in the Vision class.   
+<p align="center">
+<img width="48%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/liveness.png?raw=true"/> <img width="48%" src="https://github.com/kredibel-id/VisionSample-Android/blob/main/ocr.png?raw=true"/>  
+</p>   
+
 ## Liveness Detection   
 #### 1. Single Detection   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
@@ -469,7 +466,7 @@ livenessView.stop();
 
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
-val ocrPreview : OCRCameraPreview = findViewById(R.id.ocrPreview);
+val ocrPreview : OCRCameraPreview = findViewById(R.id.ocrPreview)
 ```
 
 ![java](https://img.shields.io/badge/-Java-%23B07119)
