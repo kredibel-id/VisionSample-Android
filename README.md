@@ -80,7 +80,7 @@ Please read the instructions <a href="https://docs.kredibel.io/authentication-1"
 ## Config AndroidManifest.xml
 After getting API-Key then open your **AndroidManifest.xml** than add a this meta-data in the scope of `<application></application>` tag.
 ```xml
-<meta-data android:name="io.kredibel.sdk.APIKEY" android:value="<Your API-Key>" /> 
+<meta-data android:name="io.kredibel.sdk.APIKEY" android:value="Your API-Key" /> 
 ```
 Please name the attribute name with `io.kredibel.sdk.APIKEY`.   
 
