@@ -174,7 +174,7 @@ You can use the **_onSuccessPage()_** method to select your activity that will r
 ```kotlin
 Vision.with(this) // Context, required
     .detection(Detection.SMILE) // required
-    .onSuccessPage(SuccessPageActivity.class) // optional for passing result data
+    .onSuccessPage(SuccessPageActivity::class.java) // optional for passing result data
     .start()
 ```
 ![java](https://img.shields.io/badge/-Java-%23B07119)
