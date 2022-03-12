@@ -151,7 +151,21 @@ Vision.with(this)
     .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT}) // required
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start();
-```
+```  
+The following are some of the head and facial movements supported by the Vision SDK.   
+
+|Face and Head Movements|Parameters|
+|-----------------------|----------|
+|Smile|`Detection.SMILE`|
+|Open mouth|`Detection.MOUTH_OPEN`|
+|Look Up|`Detection.LOOK_UP`|
+|Look to the right|`Detection.RIGHT`|
+|Looking down|`Detection.LOOKING_DOWN`|
+|Look to the left|`Detection.LEFT`|
+|Get random head and face movements|`Detection.RANDOM_HEAD_ANGLE`|
+|Left eye wink|`Detection.BLINK_LEFT`|
+|Right eye wink|`Detection.BLINK_RIGHT`|
+|Getting random winks|`Detection.RANDOM_EYE_BLINK`|
 ## Identity OCR   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
