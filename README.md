@@ -70,10 +70,10 @@ allprojects {
 #### 2. Add this dependency to gradle script on app module.
 ```groovy
 dependencies {
-    implementation 'io.kredibel:vision:<latest version>' // <—-- Add this.
+    implementation 'io.kredibel:vision:0.0.1-beta-20220312185332' // Please check latest version
 }
 ```
-Check <a target="_blank" href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/">latest version</a>.
+
 ## API-Key
 Please read the instructions <a href="https://docs.kredibel.io/authentication-1">here</a> to get the API-Key or contact our sales team.
 
