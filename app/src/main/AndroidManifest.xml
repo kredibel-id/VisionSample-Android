@@ -29,7 +29,7 @@
     </activity>
 
     <meta-data
-        android:name="kredibel-apikey"
+        android:name="io.kredibel.sdk.APIKEY"
         android:value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCwicGVybWlzc2lvbl9pZCI6MSwiY29tcGFueV9pZCI6OSwidHlwZV9pZCI6MiwidW5pcXVlIjoiQTlSQ1oyIn0.DDWvuNT8jaBpgFGjejtkmoQv5O2rFWYL89GOCN7nulw"/>
   </application>
 
