@@ -183,7 +183,12 @@ Vision.with(this)
     .onSuccessPage(SuccessPageActivity.class)  // optional
     .start();
 ```
-
+The following are some of the supported document types and their parameter names.
+|Dosument Type|Parameters|
+|--|--|
+|Indonesian National Identity Card|`Identity.KTP`|
+|Driver's license|`Identity.SIM`|
+|Passport|`Identity.PASSPORT`|
 ## Get Result Data
 You can use the **_onSuccessPage()_** method to select your activity that will receive the result data.
 
