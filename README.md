@@ -1,5 +1,5 @@
 # Vision Sample (Android)   
-![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) <a href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/"><img src="https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220312185332-%230169FF"/></a>   
+![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) <a href="https://repo.repsy.io/mvn/kredibel/sdk/io/kredibel/vision/"><img src="https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220313085304-%230169FF"/></a>   
 
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.   <br/><br/>
 You can checkout the source code of this project.
@@ -19,7 +19,7 @@ Then open this sample project with Android Studio or Intellij IDEA.
     Vision SDK
 </h1>
 <p align="center">  
-    <a href="https://repo.repsy.io/mvn/kredibel/vision/io/kredibel/vision/"><img src="https://img.shields.io/badge/Version-0.0.1--beta--20220312185332-%230169FF"/></a>
+    <a href="https://repo.repsy.io/mvn/kredibel/sdk/io/kredibel/vision/"><img src="https://img.shields.io/badge/Version-0.0.1--beta--20220313085304-%230169FF"/></a>
 </p>
 
 ## Introduction
@@ -43,7 +43,7 @@ Currently the Vision SDK can only be used on the Android platform.
 ## Gradle
 #### 1. Add kredibel repository.   
 ```groovy
-maven{url 'https://repo.repsy.io/mvn/kredibel/vision'}
+maven{url 'https://repo.repsy.io/mvn/kredibel/sdk'}
 ```
 You can do this in two alternative ways.
 - Latest way(Gradle 7+) : Add repository in dependencyResolutionManagement in setting.gradle.
@@ -52,7 +52,7 @@ dependencyResolutionManagement {
     repositories {
         ...
         ...
-        maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this
+        maven{url 'https://repo.repsy.io/mvn/kredibel/sdk'} // <—-- add this
     }
 }
 ```
@@ -62,7 +62,7 @@ allprojects {
     repositories {
        ...
        ...
-       maven{url 'https://repo.repsy.io/mvn/kredibel/vision'} // <—-- add this 
+       maven{url 'https://repo.repsy.io/mvn/kredibel/sdk'} // <—-- add this 
     }
 }
 ```
@@ -70,7 +70,7 @@ allprojects {
 #### 2. Add this dependency to gradle script on app module.
 ```groovy
 dependencies {
-    implementation 'io.kredibel:vision:0.0.1-beta-20220312185332' // Please check latest version
+    implementation 'io.kredibel:vision:0.0.1-beta-20220313085304' // Please check latest version
 }
 ```
 

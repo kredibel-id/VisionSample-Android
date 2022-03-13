@@ -3,7 +3,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven{url 'https://repo.repsy.io/mvn/kredibel/vision'}
+        maven{url 'https://repo.repsy.io/mvn/kredibel/sdk'}
     }
 }
 rootProject.name = "VisionSample"
