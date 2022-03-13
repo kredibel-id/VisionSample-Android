@@ -39,7 +39,9 @@ Identity OCR is an Optical Character Recognition (OCR) service that supports thr
 Currently the Vision SDK can only be used on the Android platform.  
 ### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2019-%233DDC84?logo=android) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-%233DDC84?logo=android)
+  
 # Install / Setup
+- Aar file size : 2,7 MB 
 ## Gradle
 #### 1. Add kredibel repository.   
 ```groovy
@@ -149,7 +151,21 @@ Vision.with(this)
     .detection(new String[]{Detection.SMILE, Detection.MOUTH_OPEN, Detection.BLINK_LEFT}) // required
     .delay(2000)  // milliseconds, optional. Default = 1000
     .start();
-```
+```  
+The following are some of the head and facial movements supported by the Vision SDK.   
+
+|Face and Head Movements|Parameters|
+|-----------------------|----------|
+|Smile|`Detection.SMILE`|
+|Open mouth|`Detection.MOUTH_OPEN`|
+|Look Up|`Detection.LOOK_UP`|
+|Look to the right|`Detection.RIGHT`|
+|Looking down|`Detection.LOOKING_DOWN`|
+|Look to the left|`Detection.LEFT`|
+|Get random head and face movements|`Detection.RANDOM_HEAD_ANGLE`|
+|Left eye wink|`Detection.BLINK_LEFT`|
+|Right eye wink|`Detection.BLINK_RIGHT`|
+|Getting random winks|`Detection.RANDOM_EYE_BLINK`|
 ## Identity OCR   
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
@@ -167,7 +183,12 @@ Vision.with(this)
     .onSuccessPage(SuccessPageActivity.class)  // optional
     .start();
 ```
-
+The following are some of the supported document types and their parameter names.
+|Dosument Type|Parameters|
+|--|--|
+|Indonesian National Identity Card|`Identity.KTP`|
+|Driver's license|`Identity.SIM`|
+|Passport|`Identity.PASSPORT`|
 ## Get Result Data
 You can use the **_onSuccessPage()_** method to select your activity that will receive the result data.
 
