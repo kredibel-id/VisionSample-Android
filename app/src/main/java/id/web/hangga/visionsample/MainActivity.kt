@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnLiveness).setOnClickListener {
             Vision.with(this)
-                .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN))
+                .detection(arrayOf(Detection.SMILE, Detection.LEFT, Detection.RIGHT, Detection.MOUTH_OPEN))
                 .listener(object : VisionListener{ // optional, if you need add custom action.
                     override fun onSuccess(livenessResult: MutableList<LivenessResult>?, ocrResult: OcrResult?) {
 
@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
                         showMessage(s!!)
                     }
                 })
-                .showContour(true)     // optional
-                .showLabel(true)       // optional
+                //.showContour(true)     // optional
+                //.showLabel(true)       // optional
                 .showBoundingBox(true) // optional
                 .start()
         }
