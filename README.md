@@ -28,8 +28,9 @@ Vision SDK is a library that provides computer vision services such as Liveness 
 ##### Liveness Detection
 
 1. Examine the digital representation of the user's face from the camera preview in realtime.
-2. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
-3. Determine whether it is a living person or not.
+2. Out-of-frame face detection to prevent spoofing.
+3. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
+4. Determine whether it is a living person or not.
 ##### Identity OCR
 Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
 1. National Identity (KTP)
