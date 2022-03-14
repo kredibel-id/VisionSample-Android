@@ -32,10 +32,11 @@ Vision SDK is a library that provides computer vision services such as Liveness 
 3. Analyze multiple movements, including head movements, eye blinks, smiles and mouth opening to determine activity.
 4. Determine whether it is a living person or not.
 ##### Identity OCR
-Identity OCR is an Optical Character Recognition (OCR) service that supports three types of documents such as:
+Identity OCR is an Optical Character Recognition (OCR) service that supports some types :
 1. National Identity (KTP)
 2. Driving License (SIM)
-3. Passport    
+3. Passport
+4. Handheld with Id Card selfie    
 
 Currently the Vision SDK can only be used on the Android platform.  
 ### Support API Level
@@ -187,9 +188,10 @@ Vision.with(this)
 The following are some of the supported document types and their parameter names.
 |Dosument Type|Parameters|
 |--|--|
-|Indonesian National Identity Card|`Identity.KTP`|
+|Indonesian National Identity Card/ Kartu Tanda Penduduk(KTP)|`Identity.KTP`|
 |Driver's license|`Identity.SIM`|
 |Passport|`Identity.PASSPORT`|
+|Handheld with id card selfie|`Identity.HANDHELD`|
 ## Get Result Data
 You can use the **_onSuccessPage()_** method to select your activity that will receive the result data.
 
