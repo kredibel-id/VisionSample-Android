@@ -9,8 +9,8 @@ import io.kredibel.vision.*
 
 class CustomLivenessActivity : VisionActivity() {
 
-    lateinit var livenessView : LivenessCameraView
-    lateinit var imgIcResult : ImageView
+    private lateinit var livenessView : LivenessCameraView
+    private lateinit var imgIcResult : ImageView
     lateinit var txtLabel : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +25,7 @@ class CustomLivenessActivity : VisionActivity() {
         livenessView.start()
     }
 
-    val listener = object : LivenessDetectionListener {
+    private val listener = object : LivenessDetectionListener {
         override fun onError(message: String?) {
             showMessage(message)
         }
