@@ -74,7 +74,7 @@ allprojects {
 #### 2. Add this dependency to gradle script on app module.
 ```groovy
 dependencies {
-    implementation 'io.kredibel:vision:0.0.1-beta-20220313085304' // Please check latest version
+    implementation 'io.kredibel:vision:0.0.1-beta-20220511170731' // Please check latest version
 }
 ```
 
