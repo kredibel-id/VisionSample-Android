@@ -68,12 +68,11 @@ dependencies {
 ## API-Key
 Please read the instructions <a href="https://docs.kredibel.io/authentication-1">here</a> to get the API-Key or contact our sales team.
 
-After getting API-Key then open your **AndroidManifest.xml** than add a this meta-data in the scope of `<application></application>` tag.
+After getting API-Key then open your **_AndroidManifest.xml_** than add a this meta-data in the scope of `<application></application>` tag. Name the attribute name with `io.kredibel.sdk.APIKEY`.   
 ```xml
 <meta-data android:name="io.kredibel.sdk.APIKEY" android:value="Your API-Key" /> 
 ```
-Please name the attribute name with `io.kredibel.sdk.APIKEY`.   
-
+<!--
 Example :     
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,7 +102,7 @@ Example :
     </application>
 </manifest>
 ```
-
+-->
 # How to Use (Basic Implementation)   
 The Vision class is the main class in the Kredibel Vision SDK. This class contains methods or functions to handle Liveness Detection and OCR quickly. You don't need to create a layout/UI, because we have provided everything. You just use all the functions/methods in the Vision class.   
 <p align="center">
