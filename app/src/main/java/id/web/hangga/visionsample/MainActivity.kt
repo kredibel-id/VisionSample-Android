@@ -1,18 +1,11 @@
 package id.web.hangga.visionsample
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import io.kredibel.vision.Detection
-import io.kredibel.vision.Identity
-import io.kredibel.vision.LivenessResult
-import io.kredibel.vision.OcrResult
-import io.kredibel.vision.Vision
-import io.kredibel.vision.VisionListener
+import io.kredibel.vision.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,9 +15,19 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnLiveness).setOnClickListener {
             Vision.with(this)
-                .detection(arrayOf(Detection.SMILE, Detection.LEFT, Detection.RIGHT, Detection.MOUTH_OPEN))
-                .listener(object : VisionListener{ // optional, if you need add custom action.
-                    override fun onSuccess(livenessResult: MutableList<LivenessResult>?, ocrResult: OcrResult?) {
+                .detection(
+                    arrayOf(
+                        Detection.SMILE,
+                        Detection.LOOK_LEFT,
+                        Detection.LOOK_RIGHT,
+                        Detection.MOUTH_OPEN
+                    )
+                )
+                .listener(object : VisionListener { // optional, if you need add custom action.
+                    override fun onSuccess(
+                        livenessResult: MutableList<LivenessResult>?,
+                        ocrResult: OcrResult?
+                    ) {
 
                     }
 
@@ -38,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 .start()
         }
 
-        findViewById<Button>(R.id.btnOcr).setOnClickListener{
+        findViewById<Button>(R.id.btnOcr).setOnClickListener {
             Vision.with(this)
                 .identity(Identity.KTP)
                 .showOCRLastResult(true)
@@ -46,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 .start()
         }
 
-        findViewById<Button>(R.id.btnCustomLiveness).setOnClickListener{
+        findViewById<Button>(R.id.btnCustomLiveness).setOnClickListener {
             val intent = Intent(this, CustomLivenessActivity::class.java)
             startActivity(intent)
         }
@@ -57,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun showMessage(s : String){
+    fun showMessage(s: String) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
     }
 }
