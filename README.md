@@ -1,5 +1,7 @@
 # Vision Sample (Android)   
 ![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) <a href="https://repo.repsy.io/mvn/kredibel/sdk/io/kredibel/vision/"><img src="https://img.shields.io/badge/Vision%20SDK-0.0.1--beta--20220313085304-%230169FF"/></a>   
+### Share Please 😊
+<a target="_blank" href="https://twitter.com/intent/tweet?text=Vision Sample Android&url=https://github.com/kredibel-id/VisionSample-Android"> <img width="30" src="https://camo.githubusercontent.com/35b0b8bfbd8840f35607fb56ad0a139047fd5d6e09ceb060c5c6f0a5abd1044c/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f747769747465722e737667" /></a><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/kredibel-id/VisionSample-Android"> <img width="30" src="https://camo.githubusercontent.com/8f245234577766478eaf3ee72b0615e99bb9ef3eaa56e1c37f75692811181d5c/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f66616365626f6f6b2e737667" /></a><a target="_blank" href="https://plus.google.com/share?url=https://github.com/kredibel-id/VisionSample-Android"> <img width="30" src="https://camo.githubusercontent.com/15fdf0cbd71e1ca3db22839bf80a55d246e4a19e4a019021fdf121e2cc193488/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f676f6f676c655f706c75732e737667" /></a><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/kredibel-id/VisionSample-Android&title=Vision Sample Android&summary=A sample project of implementing Liveness Detection and Identity OCR on Android app using Kredibel Vision SDK.&source=https://github.com/kredibel-id/VisionSample-Android"> <img width="30" src="https://camo.githubusercontent.com/c8a9c5b414cd812ad6a97a46c29af67239ddaeae08c41724ff7d945fb4c047e5/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6c696e6b6564696e2e737667" /></a><a target="_blank" href="https://pinterest.com/pin/create/button/?url=https://github.com/kredibel-id/VisionSample-Android&description=A sample project of implementing Liveness Detection and Identity OCR on Android app using Kredibel Vision SDK."> <img width="30" src="https://camo.githubusercontent.com/ef99a09dfa010e68c26ec4414631a47bbc1086677227bd97538d051b8b93ae21/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f70696e7465726573742e737667" /></a><a target="_blank" href="http://www.tumblr.com/share/link?url=https://github.com/kredibel-id/VisionSample-Android&description=A sample project of implementing Liveness Detection and Identity OCR on Android app using Kredibel Vision SDK."> <img width="30" src="https://camo.githubusercontent.com/f47b844e7015760d6fd9c1fb86834af2cf82d215fc9c20c24edc8173c85059a1/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f74756d626c722e737667" /></a> 
 
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.   <br/><br/>
 You can checkout the source code of this project.
@@ -47,27 +49,10 @@ Currently the Vision SDK can only be used on the Android platform.
 ## Gradle
 #### 1. Add kredibel repository.   
 ```groovy
-maven{url 'https://repo.repsy.io/mvn/kredibel/sdk'}
-```
-You can do this in two alternative ways.
-- Latest way(Gradle 7+) : Add repository in dependencyResolutionManagement in setting.gradle.
-```groovy
-dependencyResolutionManagement {
-    repositories {
-        ...
-        ...
-        maven{url 'https://repo.repsy.io/mvn/kredibel/sdk'} // <—-- add this
-    }
-}
-```
-- Old way : Add repository in build.gradle file at Project level.
-```groovy
-allprojects {
-    repositories {
-       ...
-       ...
-       maven{url 'https://repo.repsy.io/mvn/kredibel/sdk'} // <—-- add this 
-    }
+repositories {
+   ...
+   ...
+   maven{url 'https://repo.repsy.io/mvn/kredibel/sdk'} // <—-- add this 
 }
 ```
 
@@ -75,19 +60,19 @@ allprojects {
 ```groovy
 dependencies {
     implementation 'io.kredibel:vision:0.0.1-beta-20220511170731' // Please check latest version
+    ...
+    ...
 }
 ```
 
 ## API-Key
 Please read the instructions <a href="https://docs.kredibel.io/authentication-1">here</a> to get the API-Key or contact our sales team.
 
-## Config AndroidManifest.xml
-After getting API-Key then open your **AndroidManifest.xml** than add a this meta-data in the scope of `<application></application>` tag.
+After getting API-Key then open your **_AndroidManifest.xml_** than add `io.kredibel.sdk.APIKEY` meta-data in the scope of `<application></application>` tag.   
 ```xml
 <meta-data android:name="io.kredibel.sdk.APIKEY" android:value="Your API-Key" /> 
 ```
-Please name the attribute name with `io.kredibel.sdk.APIKEY`.   
-
+<!--
 Example :     
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,7 +102,7 @@ Example :
     </application>
 </manifest>
 ```
-
+-->
 # How to Use (Basic Implementation)   
 The Vision class is the main class in the Kredibel Vision SDK. This class contains methods or functions to handle Liveness Detection and OCR quickly. You don't need to create a layout/UI, because we have provided everything. You just use all the functions/methods in the Vision class.   
 <p align="center">
