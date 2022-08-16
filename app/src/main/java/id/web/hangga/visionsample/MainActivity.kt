@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnLiveness).setOnClickListener {
             Vision.with(this)
+                .debug()
                 .detection(
                     arrayOf(
                         Detection.SMILE,
