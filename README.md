@@ -276,6 +276,7 @@ Some optional features that you can use.
 ![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
 ```kotlin
 Vision.with(this)
+    .debug() // If you want to run in debug mode for development purposes use <a href="https://synapses.sandbox.kredibel.co.id/">Sandbox API<a/>    
     .detection(arrayOf(Detection.SMILE, Detection.MOUTH_OPEN)) // required
     .delay(2000)  // milliseconds, optional. Default = 1000
     .onSuccessPage(SecondActivity::class.java) // optional
