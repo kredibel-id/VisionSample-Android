@@ -360,6 +360,6 @@ You can customize instructions and some text by adding the following string reso
 <string name="kv_clue_card_inframe" translatable="false">Position your identity card in the frame and in a well-lit place.
 </string>
 ```
-<a href="https://github.com/kredibel-id/VisionSample-Android/blob/main/Advance.md">↳ Next : Advance Implementation </a>
+## <a href="https://github.com/kredibel-id/VisionSample-Android/blob/main/Advance.md">↳ Next : Advance Implementation </a>
 
 
