@@ -1,11 +1,6 @@
 # Vision Sample (Android)   
 ![gradle](https://img.shields.io/badge/Gradle-7.0.2-critical?logo=gradle) ![targetsdk](https://img.shields.io/badge/Target%20SDK-API%2031-%233DDC84?logo=android) ![ktx](https://img.shields.io/badge/KTX-1.7.0-%237E52FF?logo=kotlin) <a href="https://repo.repsy.io/mvn/kredibel/sdk/io/kredibel/vision/"><img src="https://img.shields.io/badge/Vision%20SDK-0.0.1-%230169FF"/></a>      
 
-### ↳ Stargazers
-[![Stargazers repo roster for @kredibel-id/VisionSample-Android](https://reporoster.com/stars/kredibel-id/VisionSample-Android)](https://github.com/kredibel-id/VisionSample-Android/stargazers)
-### ↳ Forkers
-[![Forkers repo roster for @kredibel-id/VisionSample-Android](https://reporoster.com/forks/kredibel-id/VisionSample-Android)](https://github.com/kredibel-id/VisionSample-Android/network/members)
-
 A sample project of implementing **Liveness Detection** and **Identity OCR** on Android app using **Kredibel Vision SDK**.   <br/><br/>
 You can checkout the source code of this project.
 ```text
@@ -14,8 +9,6 @@ git clone https://github.com/kredibel-id/VisionSample-Android.git
 Then open this sample project with Android Studio or Intellij IDEA.
 <h1></h1>
 <br/><br/><br/><br/>
-
-
 
 <p align="center">  
     
@@ -355,4 +348,7 @@ You can customize instructions and some text by adding the following string reso
 ```
 ## <a href="https://github.com/kredibel-id/VisionSample-Android/blob/main/Advance.md">↳ Next : Advance Implementation </a>
 
-
+### ↳ Stargazers
+[![Stargazers repo roster for @kredibel-id/VisionSample-Android](https://reporoster.com/stars/kredibel-id/VisionSample-Android)](https://github.com/kredibel-id/VisionSample-Android/stargazers)
+### ↳ Forkers
+[![Forkers repo roster for @kredibel-id/VisionSample-Android](https://reporoster.com/forks/kredibel-id/VisionSample-Android)](https://github.com/kredibel-id/VisionSample-Android/network/members)
